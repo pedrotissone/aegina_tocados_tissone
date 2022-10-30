@@ -1,0 +1,13 @@
+
+.navBar{
+    display: flex;
+    justify-content:space-around;
+    border: solid 0.1rem pink;
+    background-color: rgb(32, 92, 92);
+
+}
+
+.navBarTitle{
+    color: rgb(32, 92, 92);
+    text-align: center;
+}

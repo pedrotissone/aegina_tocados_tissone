@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+// Importando componentes
+import NavBarContainer from './componentes/NavBar/NavBarContainer';
+import MyButton from './componentes/MyButton/MyButton.jsx';
+import Header from './componentes/Header/Header';
 
 function App() {
+  const randomCounter = Math.round(Math.random()* 10)  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+      <header>
+
+        <Header counter={randomCounter}/>
+
       </header>
+
+      <main className='main'>
+
+        <NavBarContainer greeting="Bienvenidos, seleccione un tipo de tocado"/>
+
+      </main>
+
+       
+        <MyButton text="boton maestro" color="blue"/>
+        <MyButton text="Boton 1" color="orange" otrotext="kaka" />
+        <MyButton text="boton2" otra="hola loco" />
+        
+     
     </div>
   );
 }

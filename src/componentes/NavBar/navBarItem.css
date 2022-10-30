@@ -1,0 +1,21 @@
+
+.navBarDiv{
+    display: flex;
+    flex-direction: column;
+}
+.itemTitle{
+    margin: 1rem;
+    cursor: pointer;
+    color: rgb(227, 214, 214);
+    text-align: center;
+  
+}
+
+.itemTitle:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+.navBarImg{
+    margin-top: 1.5rem;
+}
