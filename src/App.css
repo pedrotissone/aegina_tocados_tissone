@@ -9,3 +9,9 @@
 body{
   background-color: rgba(128, 128, 128, 0.224);
 }
+
+.productSection{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}

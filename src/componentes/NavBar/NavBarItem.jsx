@@ -11,3 +11,5 @@ function NavBarItem(props) { // Este componente va a representar las cards de lo
 }
 
 export default NavBarItem
+
+//LAS PROPS DEL COMPONENTE SE ESCRIBEN ACA, CON EL NOMBRE CON EL QUE LAS VAS A TENER QUE LLAMAR (En este caso: img, title).

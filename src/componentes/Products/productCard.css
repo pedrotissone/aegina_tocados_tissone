@@ -1,0 +1,44 @@
+.productCardDiv{
+    background-color: rgb(206, 206, 186);
+}
+.productCardTitle{
+    text-align: center;
+    margin-bottom: 1rem;
+    color: whitesmoke;
+    background-color: #205c5c;
+}
+
+.productCardImg{
+    width:25rem;
+}
+
+.productCardDescription{
+    text-align: center;
+    color: whitesmoke;
+    background-color: #205c5c;
+
+}
+
+.productCardFooter{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;       
+}
+
+.productCardFooterPrice{
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    margin-top:1rem;
+
+}
+
+.productCardFooterButton{
+    background-color: lightblue;
+    color: whitesmoke;
+    border-color: grey;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    margin-top:1rem;
+
+}
+
