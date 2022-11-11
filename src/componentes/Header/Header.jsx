@@ -1,5 +1,9 @@
 
 import "./header.css"
+import CartWidget from "./CartWidget"
+
+
+
 
 function Header(props) {
   return (
@@ -11,11 +15,8 @@ function Header(props) {
         <h2>Head Pieces</h2>
         </div>
 
-        <div className="headerCarrito">
-        <img src="./img/carritoCompras.svg" alt="carrito de compras"/>
-        <span>{props.counter}</span>
-        </div>
-        
+        <CartWidget counter={props.counter}/>
+               
     </div>
     
     

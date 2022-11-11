@@ -10,6 +10,7 @@
 
 .productCardImg{
     width:25rem;
+    cursor: pointer;
 }
 
 .productCardDescription{

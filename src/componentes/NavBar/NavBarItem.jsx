@@ -1,10 +1,11 @@
 import "./navBarItem.css"
+import {Link} from "react-router-dom"; //Importo componente Link
 
 function NavBarItem(props) { // Este componente va a representar las cards de los diferentes tipos de tocado (flores, piedra y porcelana)
   return (
     <div className="navBarDiv">
         <img className="navBarImg" src={props.img} alt={props.title}/>
-        <a href="/" className="itemTitle">{props.title}</a>
+        <Link to="/products" className="itemTitle">{props.title}</Link> 
         
     </div>
   )
