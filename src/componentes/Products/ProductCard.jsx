@@ -7,12 +7,14 @@ import {Link} from "react-router-dom"
 
 
 function ProductCard( {title, img, description, price, id} ) {
+  
+  const urlDetail = `/detail/${id}`;
  
   return (
     <div className='productCardDiv'>
             <div className='productCard'>              
               <h2 className='productCardTitle'>{title}</h2>
-              <Link to=""><img className='productCardImg' src={img} alt={description}/></Link>
+              <Link to={urlDetail}><img className='productCardImg' src={img} alt={description}/></Link>
               <p className='productCardDescription'>{description}</p>
               <div className='productCardFooter'>
                 <p className='productCardFooterPrice'>VALOR: ${price}</p>

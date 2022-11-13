@@ -4,23 +4,26 @@ import {useState, useEffect} from "react"
 import ProductCard from './ProductCard.jsx'
 import "./products.css"
 import getItems from '../../services/mockService.js'
+import { useParams } from "react-router-dom"
 
 
-function Products() {
+function Products() {  
 
   // Necesito un estado, xq se renderiza el codigo vacio, y luego se cumple la promesa, necesito reRender!
  
   const [products, setProducts] = useState([])//array vacio para evitar errores
+
+  const {idCategory} = useParams()
   
   //Llamo a mi promise getItem() (va a tardar 2 seg y el codigo sigue ejecutandose), uso el metodo then para resolver y le asigno a la variable products como valor la respuestaDatos que me da la promise
   //Uso efecto para que el pedido y reRender lo haga solo la primera vez! y no siempre.
   
   useEffect(
     ()=> {
-      getItems().then((respuestaDatos)=>{
+      getItems(idCategory).then((respuestaDatos)=>{
         setProducts(respuestaDatos) //NO SE ROMPE TODO XQ TENGO EL SET TIMEOUT SINO TE HARÍA UN BUCLE INFINITO Y TE RENDERIZARIA TODO INFINITAS VECES XQ SIEMPRE ESTARIA CMABIANDO DE ESTADO
       })
-    },[] //array vacio para indicar que lo hace solo cuando el componente se monta (1 vez)
+    },[idCategory] //array vacio para indicar que lo hace solo cuando el componente se monta (1 vez)
   )
   return (    
       <>

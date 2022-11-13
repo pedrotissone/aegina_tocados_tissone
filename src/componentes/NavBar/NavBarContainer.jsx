@@ -1,5 +1,6 @@
 import NavBarItem from "./NavBarItem"
 import "./navBarContainer.css"
+import {Link} from "react-router-dom"
 
 
 function NavBarContainer(props) {
@@ -7,9 +8,13 @@ function NavBarContainer(props) {
     <>        
         <h3 className="navBarTitle">{props.greeting}</h3>
       <div className="navBar">
-        <NavBarItem title="Flores Preservadas" img="/img/img1.png"/>
-        <NavBarItem title="Piedras" img="/img/img2.png"/>
-        <NavBarItem title="Porcelana Fría" img="/img/img3.png"/>
+
+        <Link to="/category/Flores preservadas"><NavBarItem title="Flores preservadas" img="/img/img1.png"/></Link>
+
+        <Link to="/category/Piedras"><NavBarItem title="Piedras" img="/img/img2.png"/></Link>
+
+        <Link to="/category/Porcelana fria"><NavBarItem title="Porcelana Fría" img="/img/img3.png"/></Link>
+
       </div>
 
     </>
