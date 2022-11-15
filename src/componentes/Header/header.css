@@ -6,10 +6,15 @@
 .headerTitle{
     margin: auto;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
     text-align: center;
     color: rgb(32, 92, 92);
+
 }
+
+.headerTitle:hover{
+    background-color: whitesmoke;
+}
+
 
 
