@@ -1,13 +1,20 @@
+
+
 .clickCounterDiv{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
+
+.clickCounterButtons{
+    display: flex;
+}
+
 .clickCounterMenos{
    width: 1.3rem;
    background-color: grey;
-   cursor: pointer;
-    
+   cursor: pointer;    
     
 }
 .clickCounterMas{
@@ -19,3 +26,4 @@
 .clickCounter{
     margin: 0.5rem;
 }
+

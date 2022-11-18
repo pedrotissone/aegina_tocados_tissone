@@ -14,7 +14,7 @@ function ItemDetailContainer() {
 
   // const urlParams = useParams() O  sino usamos destructuring extrayendo la propiedad id (definida en Route) y transofrmandola en una variable
   const { id } = useParams()
-  console.log(useParams())
+  // console.log(useParams())
 
 
   // Necesito un estado, xq se renderiza el codigo vacio, y luego se cumple la promesa, necesito reRender!
@@ -39,6 +39,7 @@ function ItemDetailContainer() {
       img={product.img}
       description={product.description}
       price={product.price}
+      stock={product.stock}
       />
      
                   

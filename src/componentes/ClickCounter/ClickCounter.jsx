@@ -1,13 +1,15 @@
 import React from 'react'
 import "./clickCounter.css"
+import MyButton from "../MyButton/MyButton"
 
-let stock = 10
+
+// let stock = 10 //AHORA LE PASO EL STOCK COMO PROP PARA QUE SEA DINAMICO
 
 function ClickCounter(props) {
     let [count, setCount] = React.useState(1) //Le doy 1 como valor inicial al estado del componente
 
     function handleClickMas(){
-        if (count < stock){
+        if (count < props.stock){
             setCount(count + 1)
         }        
     }
@@ -17,13 +19,22 @@ function ClickCounter(props) {
             setCount(count -1)
         }        
     }
+   
 
-  return (    
+  return (
+  
     <div className='clickCounterDiv'>
-    <button onClick={handleClickMenos} className='clickCounterMenos'>-</button>
-    <div className='clickCounter'>{count}</div>
-    <button onClick={handleClickMas} className='clickCounterMas'>+</button>
+        <div className='clickCounterButtons'>
+        <MyButton onClick={handleClickMenos} className='clickCounterMenos'>-</MyButton>
+        <div className='clickCounter'>{count}</div>
+        <MyButton onClick={handleClickMas} className='clickCounterMas'>+</MyButton>
+        </div>
+ 
+        <button onClick={()=> props.handleAddToCart(count)}>Agregar al Carrito</button>
+    
     </div>
+
+
   )
 }
 
