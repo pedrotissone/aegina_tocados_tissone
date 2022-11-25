@@ -2,7 +2,7 @@ import React, {useContext} from 'react' //Agrego un Hook
 import "./cartWidget.css"
 import { cartContext } from "../../context/cartContext" //Importo context
 
-function CartWidget(props) {
+function CartWidget() {
 
   const miContext = useContext(cartContext) //Me conecto con el contexto que yo le diga y me trae su value (Su contenido)
   // console.log(miContext)
@@ -11,7 +11,7 @@ function CartWidget(props) {
     <div>
       <div className="carrito">
         <img src="/img/carritoCompras.svg" alt="carrito de compras" />
-        <span>0</span>
+        <span>{miContext.itemsInCart()}</span>
       </div>
     </div>
   )

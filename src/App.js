@@ -6,14 +6,10 @@ import Products from './componentes/Products/Products';
 import ItemDetailContainer from './componentes/ItemDetail/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; //Importamos de la libreria los tres componentes necesarios
 import { CartContextProvider } from './context/cartContext';
-
-
-
-
+import CartView from './componentes/CartView/CartView';
 
 
 function App() {
-
  
 
   return (
@@ -64,6 +60,8 @@ function App() {
 
             {/* Esta ruta * es para probar errores, ya que si no selecciono ninguna de las rutas definidas va a mostrar por defecto esa siempre. Igual la tengo comentada y solo la uso si necesito corroborar que las rutas funcionan o no */}
             {/* <Route path="*" element={ <h1>ERROR 404: La ruta definida no existe</h1> } />  */}
+
+            <Route path='/cart' element={<CartView/>}/>
 
 
 

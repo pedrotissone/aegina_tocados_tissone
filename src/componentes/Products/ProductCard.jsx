@@ -5,8 +5,8 @@ import {Link} from "react-router-dom"
 
 
 
-
-function ProductCard( {title, img, description, price, id} ) {
+//RENDERING CONDICIONAL DE LA PROPIEDAD DESCUENTO USANDO OPERADOR &&
+function ProductCard( {title, img, description, price, id, discount} ) {
   
   const urlDetail = `/detail/${id}`;
  
@@ -16,10 +16,11 @@ function ProductCard( {title, img, description, price, id} ) {
               <h2 className='productCardTitle'>{title}</h2>
               <Link to={urlDetail}><img className='productCardImg' src={img} alt={description}/></Link>
               <p className='productCardDescription'>{description}</p>
+              {discount && <small>Descuento: {discount}</small>}
               <div className='productCardFooter'>
                 <p className='productCardFooterPrice'>VALOR: ${price}</p>
-                <button className="productCardFooterButton">Agregar al carrito</button>               
-              </div>
+                <button className="productCardFooterButton">Ver más</button>               
+              </div>              
                            
             </div>
     </div>

@@ -9,7 +9,8 @@ const products =[
     stock: 10,
     category: "Flores preservadas",
     img: "/img/img1.png",
-    description: "Corona de flores de 35 cm en tonos azulados"
+    description: "Corona de flores de 35 cm en tonos azulados",
+    discount: "20%"
 },
 {
     id: 2,
@@ -18,7 +19,8 @@ const products =[
     stock: 3,
     category: "Piedras",
     img: "/img/img2.png",
-    description: "Corona de piedras de 35 cm de largo"
+    description: "Corona de piedras de 35 cm de largo",
+    discount: "30%"
 },
 {
     id: 3,

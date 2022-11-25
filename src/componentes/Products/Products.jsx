@@ -3,32 +3,46 @@ import {useState, useEffect} from "react"
 // import products from '../../data/data.js' ESTO LO COMENTO XQ AHORA VOY A TRAER LOS PRODUCTOS DE LA "API" CON PROMESAS
 import ProductCard from './ProductCard.jsx'
 import "./products.css"
-import getItems from '../../services/mockService.js'
+import getItems, {getItemsByCategory} from '../../services/firestore'
 import { useParams } from "react-router-dom"
+// import { getItemsByCategory } from '../../services/firestore.js'
 
 
-function Products() {  
-
-  // Necesito un estado, xq se renderiza el codigo vacio, y luego se cumple la promesa, necesito reRender!
+function Products() {
  
   const [products, setProducts] = useState([])//array vacio para evitar errores
-
-  const {idCategory} = useParams()
   
-  //Llamo a mi promise getItem() (va a tardar 2 seg y el codigo sigue ejecutandose), uso el metodo then para resolver y le asigno a la variable products como valor la respuestaDatos que me da la promise
-  //Uso efecto para que el pedido y reRender lo haga solo la primera vez! y no siempre.
+  const {idCategory} = useParams()   
   
+  async function getItemsAsync(){
+    if (!idCategory){
+      let respuesta = await getItems()
+      setProducts(respuesta)
+    } 
+    else {
+      let respuesta = await getItemsByCategory(idCategory)
+      setProducts(respuesta)
+    }
+    
+  }
   useEffect(
     ()=> {
-      getItems(idCategory).then((respuestaDatos)=>{
-        setProducts(respuestaDatos) //NO SE ROMPE TODO XQ TENGO EL SET TIMEOUT SINO TE HARÍA UN BUCLE INFINITO Y TE RENDERIZARIA TODO INFINITAS VECES XQ SIEMPRE ESTARIA CMABIANDO DE ESTADO
-      })
-    },[idCategory] //array vacio para indicar que lo hace solo cuando el componente se monta (1 vez)
+      getItemsAsync();
+    }, [idCategory]
   )
+  // Antes filtraba por categoria con promesas, pero lo cambie por una async function con await
+  // useEffect(
+  //   ()=> {
+  //     getItems(idCategory).then((respuestaDatos)=>{
+  //       setProducts(respuestaDatos) //NO SE ROMPE TODO XQ TENGO EL SET TIMEOUT SINO TE HARÍA UN BUCLE INFINITO Y TE RENDERIZARIA TODO INFINITAS VECES XQ SIEMPRE ESTARIA CMABIANDO DE ESTADO
+  //     })
+  //   },[idCategory] //array vacio para indicar que lo hace solo cuando el componente se monta (1 vez)
+  // )
   return (    
       <>
+      
         {products.map((products)=>{
-          return (
+          return (            
           
             <ProductCard
             key={products.id}
@@ -36,7 +50,8 @@ function Products() {
             title={products.title}
             img={products.img}
             description={products.description}
-            price={products.price}            
+            price={products.price}
+            discount={products.discount}            
             /> 
           )
           })}        
