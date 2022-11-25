@@ -56,7 +56,7 @@ export async function getItemsByCategory(categoryParams){
 
     const collectionRef = collection(DB, "products");
 
-    const queryCat = query(collectionRef, where("category" == categoryParams))
+    const queryCat = query(collectionRef, where("category", "==", categoryParams))
 
     const documentSnapShot = await getDocs(queryCat);//Necesito extraer la data de este array de documentos
     

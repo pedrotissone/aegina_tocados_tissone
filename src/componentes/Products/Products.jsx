@@ -16,11 +16,11 @@ function Products() {
   
   async function getItemsAsync(){
     if (!idCategory){
-      let respuesta = await getItems()
+      let respuesta = await getItems();
       setProducts(respuesta)
     } 
     else {
-      let respuesta = await getItemsByCategory(idCategory)
+      let respuesta = await getItemsByCategory(idCategory);
       setProducts(respuesta)
     }
     
