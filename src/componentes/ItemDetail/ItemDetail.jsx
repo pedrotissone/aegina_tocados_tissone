@@ -36,8 +36,8 @@ function ItemDetail(product) {
           <div className='itemDetailCounter'>
             {
               isInCart ?
-              <Link to="/cart">
-              <MyButton>Ir al carrito</MyButton>              
+              <Link className="itemDetailCarrito" to="/cart">
+              <MyButton >Ir al carrito</MyButton>              
               </Link>
               :
               <ClickCounter handleAddToCart={handleAddToCart} stock={product.stock} />

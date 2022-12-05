@@ -35,16 +35,19 @@ import { createContext, useState } from "react";
     }
 
     function clear(){
-        //Vaciar el estado del carrito
+        let clearCart = []
+        setCart(clearCart)
     }
 
     function removeItem(idRemove){
         console.log("removiendo item")
         
     }
-
+    
     function priceInCart(){
-
+        let totalPrice = 0
+        cart.forEach((producto) => totalPrice = totalPrice + (producto.price * producto.count ))
+        return totalPrice
     }
 
     const value = {

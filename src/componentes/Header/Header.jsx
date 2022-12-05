@@ -20,7 +20,7 @@ function Header(props) {
         </div>
         
 
-        <CartWidget counter={props.counter}/>
+        <Link to="/cart"> <CartWidget counter={props.counter}/> </Link>
                
     </div>
     

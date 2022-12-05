@@ -7,6 +7,7 @@ import ItemDetailContainer from './componentes/ItemDetail/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; //Importamos de la libreria los tres componentes necesarios
 import { CartContextProvider } from './context/cartContext';
 import CartView from './componentes/CartView/CartView';
+import Thankyou from './componentes/Thankyou/Thankyou';
 
 
 function App() {
@@ -62,6 +63,8 @@ function App() {
             {/* <Route path="*" element={ <h1>ERROR 404: La ruta definida no existe</h1> } />  */}
 
             <Route path='/cart' element={<CartView/>}/>
+
+            <Route path="/thankyou/:idOrder" element={<Thankyou/>}/>
 
 
 

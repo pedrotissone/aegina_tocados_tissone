@@ -3,7 +3,7 @@ import {useState, useEffect} from "react"
 // import products from '../../data/data.js' ESTO LO COMENTO XQ AHORA VOY A TRAER LOS PRODUCTOS DE LA "API" CON PROMESAS
 import ProductCard from './ProductCard.jsx'
 import "./products.css"
-import getItems, {getItemsByCategory} from '../../services/firestore'
+import {getItemsOrdered, getItemsByCategory} from '../../services/firestore'
 import { useParams } from "react-router-dom"
 // import { getItemsByCategory } from '../../services/firestore.js'
 
@@ -16,7 +16,7 @@ function Products() {
   
   async function getItemsAsync(){
     if (!idCategory){
-      let respuesta = await getItems();
+      let respuesta = await getItemsOrdered();
       setProducts(respuesta)
     } 
     else {

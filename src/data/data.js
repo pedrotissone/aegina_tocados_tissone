@@ -84,8 +84,7 @@ const products =[
     category: "Porcelana fria",
     img: "/img/img3.png",
     description: "Tocado de porcelana satinada de 8 cm"
-},    
-
+},
     
 ]
 
