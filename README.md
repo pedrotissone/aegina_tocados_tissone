@@ -35,4 +35,4 @@ Pedro Federico Tissone
 ## Extras
 
 Este proyecto fue presentado para el curso de React de Coderhouse en el cual aprendi justamente dicha tecnología gracias al profesor Santiago Salkin, todavía
-queda mucho por aprender, esto recién comienza.
+queda mucho por aprender, esto recién comienza..
