@@ -11,6 +11,7 @@ import MyButton from '../MyButton/MyButton'
 function ItemDetail(product) {
   const [isInCart, setIsInCart] = useState(false)
   const { addToCart } = useContext(cartContext) //Uso destructuring para sacar la unica variable que quiero de el context
+  
   // otra opcion
   // const addToCart = useContext(cartContext).addToCart
 

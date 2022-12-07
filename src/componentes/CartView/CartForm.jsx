@@ -19,10 +19,8 @@ export default function CartForm(props) {
   }
 
   function onSubmit(evt) {
-    if (data.name.length === 0) return;
-
-    evt.preventDefault();
-    // props.onSubmit(evt, data);
+    if (data.name.length === 0) return;    
+    evt.preventDefault();    
     props.onSubmit(evt, data)
   }
 
@@ -72,12 +70,6 @@ export default function CartForm(props) {
         Finalizar compra
       </MyButton>
 
-      {/* <button
-        disabled={data.name === "" || data.phone === "" || data.email === ""}
-        type="submit"
-      >
-        Finalizar Compra
-      </button> */}
-    </form>
+     </form>
   );
 }

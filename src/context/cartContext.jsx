@@ -4,13 +4,11 @@ import { createContext, useState } from "react";
 
  export const cartContext = createContext() //Importamos e inicializamos el context con createContext
 
- export function CartContextProvider(props){ //Esto SI es un componente (un Provider)
-    const saludoContext = "Hola context"
-    
+ export function CartContextProvider(props){ //Esto SI es un componente (un Provider)    
 
     const [cart, setCart] = useState([]);
 
-    function addToCart(product, count){
+    function addToCart(product, count){       
 
         let itemAlreadyInCart = cart.findIndex(
             (itemInCart) => itemInCart.id === product.id
@@ -22,15 +20,15 @@ import { createContext, useState } from "react";
             newCart[itemAlreadyInCart].count += count;
             setCart(newCart)
         } else {
-            newCart.push({...product, count})       
-            // setCart([...cart,{...product,count}])
-            setCart(newCart)            
+            newCart.push({...product, count})            
+            setCart(newCart) // otra forma es => setCart([...cart,{...product,count}])            
         }       
     }
 
     function itemsInCart(){ //Podria también usar el metodo reduce
         let total = 0
         cart.forEach((item) => (total = total + item.count))
+        if (total !== 0)
         return total
     }
 
@@ -39,9 +37,8 @@ import { createContext, useState } from "react";
         setCart(clearCart)
     }
 
-    function removeItem(idRemove){
-        console.log("removiendo item")
-        
+    function removeItem(id){
+        setCart(cart.filter((prod)=> prod.id !== id))
     }
     
     function priceInCart(){
@@ -50,8 +47,7 @@ import { createContext, useState } from "react";
         return totalPrice
     }
 
-    const value = {
-        saludoContext,
+    const value = {        
         itemsInCart,
         addToCart,
         cart,
