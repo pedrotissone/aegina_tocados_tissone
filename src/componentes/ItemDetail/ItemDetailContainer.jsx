@@ -46,11 +46,12 @@ function ItemDetailContainer() {
       </>    
   )
 }
+
+export default ItemDetailContainer;
+
                                                                      /* Tecnica de rendering condicional 1) */
       /* {
         product ? <ItemDetail id={product.id} title={product.title} img={product.img} description={product.description} price={product.price} stock={product.stock}/> : loader
       } */
-
-export default ItemDetailContainer;
 
    

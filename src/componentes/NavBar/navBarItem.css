@@ -11,8 +11,7 @@
   
 }
 
-.itemTitle:hover{
-    color: blue;
+.itemTitle:hover{    
     text-decoration: underline;
 }
 

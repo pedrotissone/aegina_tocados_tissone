@@ -29,7 +29,7 @@ function App() {
 
           <main className='main'>
 
-            <NavBarContainer greeting="Bienvenidos, seleccione un tipo de tocado" />
+            <NavBarContainer greeting="SELECCIONE UN TIPO DE TOCADO" />
 
           </main>
 

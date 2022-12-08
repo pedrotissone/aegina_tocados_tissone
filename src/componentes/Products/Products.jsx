@@ -5,7 +5,7 @@ import ProductCard from './ProductCard.jsx'
 import "./products.css"
 import {getItemsOrdered, getItemsByCategory} from '../../services/firestore'
 import { useParams } from "react-router-dom"
-// import { getItemsByCategory } from '../../services/firestore.js'
+
 
 
 function Products() {

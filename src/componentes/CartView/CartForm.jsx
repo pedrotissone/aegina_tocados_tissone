@@ -1,5 +1,6 @@
 import { useState } from "react";
 import MyButton from "../MyButton/MyButton";
+import "./cartView.css"
 
 export default function CartForm(props) {
   const [data, setData] = useState({
@@ -26,7 +27,7 @@ export default function CartForm(props) {
 
   return (
     <form onSubmit={onSubmit}>
-      {/* Podriamos convertir los inputs en Componentes */}
+      <div className="formInputsDiv">  
       <div style={{ display: "flex", marginBottom: 8 }}>
         <label htmlFor="name" style={{ width: "100px", marginRight: 4 }}>
           Nombre
@@ -65,10 +66,13 @@ export default function CartForm(props) {
           onChange={onInputChange}
         />
       </div>
-
+      </div>  
+      
+      <div className="cartFormButton">
       <MyButton onClick={(evt)=> props.onSubmit(evt, data)}>
         Finalizar compra
       </MyButton>
+      </div>
 
      </form>
   );

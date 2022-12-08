@@ -13,7 +13,7 @@ function Header(props) {
 
         
         <div className="headerTitle">
-        <Link to="/">
+        <Link className="headerLink" to="/">
         <h1 className="title">A E G I N A </h1>
         <h2 className="subtitle">Head Pieces</h2>
         </Link>

@@ -8,13 +8,27 @@
     display: flex;
     flex-direction: column;    
     text-align: center;
-    color: rgb(32, 92, 92);
-
+    color: #205c5c;
 }
 
-.headerTitle:hover{
-    background-color: whitesmoke;
+
+.headerLink{
+    color: #205c5c;
 }
+
+.headerLink:hover{
+    color: whitesmoke
+}
+
+.title{
+    font-size: 3.8rem;
+}
+
+.subtitle{
+    font-size: 2rem;
+}
+
+
 
 
 
