@@ -11,9 +11,9 @@ function NavBarContainer(props) {
 
         <Link to="/category/Flores preservadas"><NavBarItem title="Flores preservadas" img="/img/img1.png"/></Link>
 
-        <Link to="/category/Piedras"><NavBarItem title="Piedras" img="/img/img2.png"/></Link>
+        <Link to="/category/Piedras"><NavBarItem title="Piedras" img="/img/piedra1.png"/></Link>
 
-        <Link to="/category/Porcelana fria"><NavBarItem title="Porcelana Fría" img="/img/img3.png"/></Link>
+        <Link to="/category/Porcelana fria"><NavBarItem title="Porcelana Fría" img="/img/porcelana3.png"/></Link>
 
       </div>
 

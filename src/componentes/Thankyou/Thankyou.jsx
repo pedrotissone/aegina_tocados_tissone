@@ -5,8 +5,8 @@ function Thankyou() {
     const idOrder = useParams().idOrder
   return (
     <div>
-        <h1>Gracias por su compra</h1>
-        <h3>"El id de su compra es: {idOrder}</h3>
+        <h1><center>Gracias por su compra</center></h1>
+        <h3><center>El id de su compra es: {idOrder}</center></h3>
 
     </div>
   )
