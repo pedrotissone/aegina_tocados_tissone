@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { cartContext } from "../../context/cartContext"
-import { createOrder, exportArrayToFirestore } from '../../services/firestore';
+import { createOrder, exportArrayToFirestore } from '../../services/firestore'; //El exportArrayToFirestone solo lo use UNA VEZ para traer a firestore todos los productos automaticamente
 import { useNavigate } from 'react-router-dom';
 import MyButton from '../MyButton/MyButton';
 import CartForm from './CartForm';
