@@ -11,7 +11,7 @@ import Thankyou from './componentes/Thankyou/Thankyou';
 
 
 function App() {
- 
+
 
   return (
 
@@ -23,13 +23,13 @@ function App() {
 
           <header>
 
-            <Header/>
+            <Header />
 
           </header>
 
           <main className='main'>
 
-            <NavBarContainer greeting="SELECCIONE UN TIPO DE TOCADO" />
+            <NavBarContainer />
 
           </main>
 
@@ -60,55 +60,19 @@ function App() {
             />
 
             {/* Esta ruta * es para probar errores, ya que si no selecciono ninguna de las rutas definidas va a mostrar por defecto esa siempre. Igual la tengo comentada y solo la uso si necesito corroborar que las rutas funcionan o no */}
-            {/* <Route path="*" element={ <h1>ERROR 404: La ruta definida no existe</h1> } />  */}
+            <Route path="*" element={<h1><center>ERROR 404: La ruta definida no existe</center></h1>} />
 
-            <Route path='/cart' element={<CartView/>}/>
+            <Route path='/cart' element={<CartView />} />
 
-            <Route path="/thankyou/:idOrder" element={<Thankyou/>}/>
+            <Route path="/thankyou/:idOrder" element={<Thankyou />} />
 
 
 
 
           </Routes>
 
-
-
-
-
-
-
-
-          {/* <section>
-        <ItemDetailContainer/>
-        
-      </section>
-
-      <section>
-        <ClickCounter/>
-        <CartWidget counter={randomCounter}/>
-      </section>
-
-       
-       
-      <section className='productSection'>
-
-      <Products/>
-
-      </section> */}
-
-
-
         </div>
-        {/* <MyButton text="boton maestro" color="blue"/>
-        <MyButton text="Boton 1" color="orange" otrotext="kaka" />
-        <MyButton text="boton2" otra="hola loco"/> */}
-        {/* <MyButton text="hola loco" color= "blue">
-          <p>Hola soy children creo</p>          
-        </MyButton>
 
-        <MyButton text="hola" color= "green">
-          <p>Hola soy children creo</p>      
-        </MyButton> */}
       </BrowserRouter>
     </CartContextProvider>
 

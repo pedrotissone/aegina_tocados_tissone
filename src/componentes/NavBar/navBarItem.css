@@ -6,8 +6,8 @@
 }
 .itemTitle{
     margin: 1rem;
-    cursor: pointer;
-    color: rgb(227, 214, 214);
+    cursor: pointer;    
+    color: rgb(236, 221, 221);
     text-align: center;
   
 }
@@ -21,3 +21,9 @@
     width: 400px;
     height: 400px;
 }
+
+                                                                /* NavBarItem Media Queries */
+
+
+
+
