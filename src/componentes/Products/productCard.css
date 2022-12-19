@@ -1,37 +1,38 @@
 .productCardDiv{
-    background-color: rgba(32, 92, 92, 0.85);
     margin-bottom: 1.5rem;
+    background-color: rgba(218, 213, 213, 0.742);
 }
+
+
 .productCardTitle{
     text-align: center;
-    margin-bottom: 1rem;
-    color: whitesmoke;
-    background-color: rgb(32, 92, 92);
+    margin-bottom: 1rem;     
+    color: rgba(32, 92, 92, 0.85);
+    
 }
 
 .productCardImg{
     width:400px; 
-    height: 400px;   
-        
+    height: 400px;        
 }
 
 .productCardDescription{
-    text-align: center;
-    color: whitesmoke;
-    background-color: rgb(32, 92, 92);
+    text-align: center;   
+    color: rgb(109, 105, 105); 
 
 }
 
 .productCardFooter{
     display: flex;
-    justify-content: space-between;   
+    flex-direction: column;
+    align-items: center;    
 }
 
 .productCardFooterPrice{    
     margin-bottom: 1rem;
     margin-top:1rem;
-    color: whitesmoke;
-
+    font-size: 1.5rem;
+    color: rgb(109, 105, 105);
 }
 
 .productCardFooterButton{ 
@@ -39,6 +40,10 @@
     cursor: pointer;
     margin-bottom: 1rem;
     margin-top:1rem;
-
+    border: solid 0.1rem rgba(32, 92, 92, 0.85);
+    border-radius: 8px;
+    background-color: rgb(32, 144, 144);
+    color: rgb(234, 221, 221);
+    
 }
 
