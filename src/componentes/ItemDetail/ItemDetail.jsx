@@ -23,17 +23,19 @@ function ItemDetail(product) {
   }
 
   return (
-    <>
-      <div className='itemDetailDivContainer'>
+    <div className='itemDetailBody'>
+      
+      <div className='itemDetailCart'>
+          <CartWidget />
+        </div>
 
-        <div className='itemDetailDiv'>
-          <div className='itemDetailCart'>
-            <h2 className='itemDetailPrice'>$ {product.price}</h2>
-            <CartWidget />
-          </div>
-          <h2 className='itemDetailTitle'>{product.title}</h2>
-          <img className='itemDetailImg' src={product.img} alt={product.description} />
-          <p className='itemDetailDescription'>{product.description}</p>
+      <div className='itemDetailDivContainer'>
+        <img className='itemDetailImg' src={product.img} alt={product.description} />
+        <h2 className='itemDetailTitle'>{product.title}</h2>
+        <p className='itemDetailDescription'>{product.description}</p>
+        <h2 className='itemDetailPrice'>$ {product.price}</h2>
+
+        <div className='itemDetailDiv'>        
           <div className='itemDetailCounter'>
             {
               isInCart ?
@@ -43,15 +45,12 @@ function ItemDetail(product) {
               :
               <ClickCounter handleAddToCart={handleAddToCart} stock={product.stock} />
             }
-   
-
           </div>
-
         </div>
 
       </div>
 
-    </>
+    </div>
 
 
   )
