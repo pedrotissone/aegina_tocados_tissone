@@ -62,7 +62,14 @@ function App() {
             {/* Esta ruta * es para probar errores, ya que si no selecciono ninguna de las rutas definidas va a mostrar por defecto esa siempre. Igual la tengo comentada y solo la uso si necesito corroborar que las rutas funcionan o no */}
             <Route path="*" element={<h1><center>ERROR 404: La ruta definida no existe</center></h1>} />
 
-            <Route path='/cart' element={<CartView />} />
+            <Route path='/cart' element=
+            {
+            <>
+                     
+              <CartView/>
+            
+            </>
+            }/>
 
             <Route path="/thankyou/:idOrder" element={<Thankyou />} />
 

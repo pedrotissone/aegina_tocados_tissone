@@ -40,7 +40,7 @@ function MyButton(props) {
     // );
     
     return (
-        <button style={{width: "5rem", height: "2rem"}} 
+        <button style={{width: "6rem", height: "2.5rem", borderRadius: "8px", cursor: "pointer"}} 
         onClick={props.onClick}>{props.text}{props.children}</button>
     )
 

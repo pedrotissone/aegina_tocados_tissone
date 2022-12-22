@@ -26,6 +26,7 @@ export default function CartForm(props) {
   }
 
   return (
+    <>    
     <form onSubmit={onSubmit}>
       <div className="formInputsDiv">  
       <div style={{ display: "flex", marginBottom: 8 }}>
@@ -66,14 +67,16 @@ export default function CartForm(props) {
           onChange={onInputChange}
         />
       </div>
-      </div>  
-      
+      </div>
       <div className="cartFormButton">
       <MyButton onClick={(evt)=> props.onSubmit(evt, data)}>
         Finalizar compra
       </MyButton>
-      </div>
+      </div>  
+      
+    </form>
 
-     </form>
+     
+     </>
   );
 }

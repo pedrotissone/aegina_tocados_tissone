@@ -12,6 +12,7 @@ function CartView() {
     if (cart.length === 0) return <h2><center>El carrito de compras está vacío</center></h2>
 
     //Esto era para traer a firestore los productos automaticamente, solo lo use una vez para eso
+
     // function handleExport(){
     //   exportArrayToFirestore()
     // }
@@ -30,21 +31,40 @@ function CartView() {
 
   return (
     <>
+    <table className='tableCartTemplate'>
+              <tr>
+                <th>PRODUCTOS</th>
+                <th>CANTIDAD</th>
+                <th>PRECIO</th>
+                <th></th>
+              </tr>
+              
         {cart.map((item)=>(
-            <div className='cartViewDivContainer' key={item.id}> 
-                <h2 className='cartViewTitle'>{item.title}</h2>
-                <h2 className='cartViewPrice'>${item.price}</h2>
-                <h2 className='cartViewCount'>Cantidad: {item.count}</h2>
-                <MyButton onClick={()=> removeItem(item.id)}>Eliminar</MyButton>
-            </div>
+            <tr key={item.id}>              
+              
+              <td>{item.title}</td>             
+              
+                
+                <td>{item.count}</td>             
+              
+                
+                <td>${item.price}</td>             
+
+            
+                <td><MyButton onClick={()=> removeItem(item.id)}>Eliminar</MyButton></td>
+            </tr>
         ))}
+        </table>
+        
         <div className="vaciarCarritoButton">
           <MyButton onClick={clear}>Vaciar Carrito</MyButton>       
           {/* <button onClick={handleExport}>borrenme pls</button> Esto era para traer a firestore los productos automaticamente */}
         </div>
+        <h2 className='formInformation'><center>Completando el formulario nosotros nos pondremos en contacto para arreglar los detalles de la compra</center></h2>
         <div className='cartViewForm'>
         <CartForm onSubmit={handleCheckout}/>
         </div>
+        
     </>
   )
 }
