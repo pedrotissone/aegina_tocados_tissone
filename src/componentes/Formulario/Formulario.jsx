@@ -2,9 +2,9 @@ import React from "react";
 
 function Formulario() {
 
-	const usuario = "lala"
-	const contraseña = "lolo"
-	
+	const usuario = "lala2"
+	const contraseña = "lolo2"
+
 	return(
 		<form>
 			<input type="text" placeholder="Nombre de usuario"/>
