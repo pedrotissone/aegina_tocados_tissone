@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, doc, getDoc, query, where, addDoc, orderBy, limit } from "firebase/firestore" //importo las funciones necesarias de Firebase para trabajar con firestore
+import { getFirestore, collection, getDocs, doc, getDoc, query, where, addDoc, orderBy, limit, documentId, setDoc, updateDoc } from "firebase/firestore" //importo las funciones necesarias de Firebase para trabajar con firestore
 
 const firebaseConfig = {
   apiKey: "AIzaSyAvMnEqG5EDp4qUNwfWbXJAnkZy8UVz1Nc",
@@ -100,6 +100,29 @@ export async function createOrder(order){
     return(docOrder.id);
 
 }
+
+//CREAR DOCUMENTO CON ID DE FIRESTORE USANDO SETDOC 
+
+// export  async function createDoc() {    
+//  const collectionRef = collection(DB, "products")
+//  await setDoc(doc(collectionRef), {
+//     key1: "ME CREARON"
+//  })    
+// }
+
+//ACTUALIZAR DOCUMENTO CON UPDATEDOC (SI LA KEY EXISTE TE MODIFICA EL VALOR Y SINO TE CREA NUEVA KEY)
+
+export  async function createDoc(titleparam, descriptionParam, priceParam, imgParam, id) {    
+    const collectionRef = doc(DB, "products", id)
+    await updateDoc(collectionRef, {
+        img: imgParam,
+        title: titleparam,
+        description: descriptionParam,
+        price: priceParam
+    })
+   }
+      
+
 //                                                      FUNCION PARA CARGAR TUS PRODUCTOS A FIRESTORE SOLO SE USA UNA VEZ
 
 // export async function exportArrayToFirestore(){

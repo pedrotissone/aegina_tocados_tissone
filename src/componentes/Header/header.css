@@ -1,12 +1,16 @@
 .header{
     display: flex;    
-    
 }
+
+.headerAccess {
+    margin-top: 1rem;
+}
+
 
 .headerTitle{
     margin: auto;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;      
     text-align: center;
     color: #205c5c;
 }

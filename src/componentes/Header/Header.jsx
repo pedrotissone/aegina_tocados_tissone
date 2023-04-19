@@ -10,8 +10,13 @@ function Header(props) {
   
   return (
 
-    <div className="header">      
+    <div className="header">
 
+     
+      <Link to="/Formulario">
+      <p className="headerAccess">Acceso</p>      
+      </Link>
+     
 
       <div className="headerTitle">
         <Link className="headerLink" to="/">
@@ -19,9 +24,7 @@ function Header(props) {
           <h2 className="subtitle">Head Pieces</h2>
         </Link>
       </div>
-
       <Link to="/cart"> <CartWidget counter={props.counter} /> </Link>
-
 
     </div>
 

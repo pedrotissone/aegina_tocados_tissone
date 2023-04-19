@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'; //Importamos de
 import { CartContextProvider } from './context/cartContext';
 import CartView from './componentes/CartView/CartView';
 import Thankyou from './componentes/Thankyou/Thankyou';
+import Formulario from './componentes/Formulario/Formulario';
 
 
 function App() {
@@ -35,6 +36,8 @@ function App() {
 
 
           <Routes>
+
+            <Route path='/Formulario' element={ <Formulario /> }/>
 
 
             {/* /detail/:id significa que CUALQUIER COSA! que yo escriba despues de /detail me va a mostrar el componente definido, en el caso el ItemDetailContainer. NOTA: esa ruta dinamica (/:x) React la va a guardar en su memoria */}
