@@ -12,6 +12,7 @@ import FormularioDeAcceso from './componentes/FormularioDeAcceso/FormularioDeAcc
 
 
 function App() {
+  console.log(process.env)
 
 
   return (
@@ -21,6 +22,7 @@ function App() {
       <BrowserRouter>
 
         <div className="App">
+          
 
           <header>
 
