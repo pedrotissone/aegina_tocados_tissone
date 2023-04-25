@@ -18,7 +18,7 @@ function FormularioDeAcceso() {
 
 	function handleSubmit(event) {
 		event.preventDefault()
-		console.log("hay que probar md5")
+		console.log("hay que probar md5 ya")
 	}
 	
 
