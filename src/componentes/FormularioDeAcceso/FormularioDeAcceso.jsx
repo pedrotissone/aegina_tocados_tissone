@@ -18,11 +18,7 @@ function FormularioDeAcceso() {
 
 	function handleSubmit(event) {
 		event.preventDefault()
-		if (userName == process.env.REACT_APP_USERNAME && password == process.env.REACT_APP_PASSWORD) {
-			console.log("Bien te logeaste jopi")
-		} else {
-			console.log("no funko")
-		}
+		console.log("hay que probar md5")
 	}
 	
 
