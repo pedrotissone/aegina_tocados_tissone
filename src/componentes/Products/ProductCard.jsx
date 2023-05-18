@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import "./productCard.css"
 import {Link} from "react-router-dom"
 import {createDoc} from "../../services/firestore"
+import { cartContext } from '../../context/cartContext'
 
 
 //RENDERING CONDICIONAL DE LA PROPIEDAD DESCUENTO USANDO OPERADOR &&
 
-function ProductCard( {title, img, description, price, id, discount} ) {
+function ProductCard( {title, img, description, price, id, discount} ) {  
   
   const urlDetail = `/detail/${id}`;
 
@@ -18,9 +19,9 @@ function ProductCard( {title, img, description, price, id, discount} ) {
 
   //ESTADOS PARA MODIFICAR EDICION
 
-  const [admin, setAdmin] = useState(true) //Si se logeo jopi podes editar
+  const {user} = useContext(cartContext) //Si este estado es true podes editar los productos 
 
-  const [editing, setEditing] = useState(false)
+  const [editing, setEditing] = useState(false) //Cambia a true cuando hago click en "editar" y me aparecen los inputs para edicion
 
   const [cardTitle, setCardTitle] = useState(title)
 
@@ -49,8 +50,7 @@ function ProductCard( {title, img, description, price, id, discount} ) {
 
   const handleChangeImg = (event) => {
     setCardImg(event.target.value)    
-  } 
-
+  }
   
 
   
@@ -68,7 +68,7 @@ function ProductCard( {title, img, description, price, id, discount} ) {
               <div className='productCardFooter'>
                 <p className='productCardFooterPrice'>${price}</p>
                <Link to={urlDetail}> <button className="productCardFooterButton">Detalle</button></Link>
-               {admin && <button onClick={() => setEditing(true)} className="productCardFooterButton">Editar</button>}            
+               {user && <button onClick={() => setEditing(true)} className="productCardFooterButton">Editar</button>}            
               </div>              
                            
             </div>

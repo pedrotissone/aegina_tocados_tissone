@@ -1,6 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, doc, getDoc, query, where, addDoc, orderBy, limit, documentId, setDoc, updateDoc } from "firebase/firestore" //importo las funciones necesarias de Firebase para trabajar con firestore
+import {getAuth, signInWithEmailAndPassword} from "firebase/auth"
+import md5 from "md5";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAvMnEqG5EDp4qUNwfWbXJAnkZy8UVz1Nc",
@@ -12,7 +14,7 @@ const firebaseConfig = {
 };
 
 
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 const DB = getFirestore(app)
 
 //  export default function testDatabase(){
@@ -121,7 +123,19 @@ export  async function createDoc(titleparam, descriptionParam, priceParam, imgPa
         price: priceParam
     })
    }
-      
+
+//PROBANDO AUTENTICACIÓN CON MD5 Y FIREBASE (NO SIRVE PARA USAR CON AUTH)
+   export async function comprobarUsuario(user, password) {
+    const docRef = doc(DB, "admin", "RpOiTVgLKKEQjJHQxqd1")
+    const documentSnapshot = await getDoc(docRef)
+    // console.log(documentSnapshot.data().user)
+    // console.log(documentSnapshot.data().password)
+    if (documentSnapshot.data().user == md5(user) && documentSnapshot.data().password == md5(password)) {
+        console.log("bien te logeaste")
+    } else {
+        console.log("No se encuentra autorizado")
+    }
+   }
 
 //                                                      FUNCION PARA CARGAR TUS PRODUCTOS A FIRESTORE SOLO SE USA UNA VEZ
 

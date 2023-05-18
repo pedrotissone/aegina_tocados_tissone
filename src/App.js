@@ -12,16 +12,18 @@ import FormularioDeAcceso from './componentes/FormularioDeAcceso/FormularioDeAcc
 
 
 function App() {
-  console.log(process.env)
-
 
   return (
 
     <CartContextProvider>
+       
+      
 
       <BrowserRouter>
 
         <div className="App">
+          
+          
           
 
           <header>
@@ -29,6 +31,10 @@ function App() {
             <Header />
 
           </header>
+
+        
+
+         
 
           <main className='main'>
 
@@ -39,7 +45,11 @@ function App() {
 
           <Routes>
 
+           
+
             <Route path='/Formulario' element={ <FormularioDeAcceso /> }/>
+
+            
 
 
             {/* /detail/:id significa que CUALQUIER COSA! que yo escriba despues de /detail me va a mostrar el componente definido, en el caso el ItemDetailContainer. NOTA: esa ruta dinamica (/:x) React la va a guardar en su memoria */}
@@ -86,6 +96,8 @@ function App() {
         </div>
 
       </BrowserRouter>
+
+          
     </CartContextProvider>
 
   );

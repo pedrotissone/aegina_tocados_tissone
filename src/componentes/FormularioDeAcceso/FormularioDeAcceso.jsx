@@ -1,8 +1,21 @@
 import React from "react";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom"
+import { cartContext } from "../../context/cartContext" 
+import { useState, useContext} from "react";
 import "./FormularioDeAcceso.css"
+import md5 from "md5"; // importo funcion para hashear user y password, no lo use al final
+import { app } from "../../services/firestore";
+import {getAuth, signInWithEmailAndPassword} from "firebase/auth"
 
-function FormularioDeAcceso() {	
+
+
+function FormularioDeAcceso() {
+
+	const navigate = useNavigate()	
+
+	const auth = getAuth(app)
+	
+	const {setUser} = useContext(cartContext)
 
 	const [userName, setUserName] = useState("")
 
@@ -16,20 +29,29 @@ function FormularioDeAcceso() {
 		setPassword(event.target.value)
 	}
 
-	function handleSubmit(event) {
-		event.preventDefault()
-		console.log("hay que probar md5 ya")
-	}
-	
+	async function handleSubmit(event) {
+		try {
+			event.preventDefault()
+			await signInWithEmailAndPassword(auth, userName, password)
+			console.log("Te logeaste con exito "+ auth.currentUser.email)
+			setUser(true)
+			navigate("/")
+		} catch (error) {
+			console.error("usuario o contraseña no valida")
+		}							
+	}			
 
 	return(
-		<div className="FormDiv" onSubmit={handleSubmit}>
 		
-		<form className="FormularioDeAcceso">
+		<div className="FormDiv" onSubmit={handleSubmit}>
+			
+				<form className="FormularioDeAcceso">
 			<input className="FormUser" type="text" placeholder="Nombre de usuario" onChange={handleUserNameChange}/>
 			<input className="FormPassword" type="password" placeholder="Contraseña" onChange={handlePasswordChange}/>
 			<button type="submit">Confirmar</button>
-		</form>
+		</form>	
+		
+
 		</div>
 	)
 }

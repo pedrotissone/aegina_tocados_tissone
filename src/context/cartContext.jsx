@@ -1,10 +1,14 @@
 //IMPORTANTE: CADA CAMBIO QUE SE REALIZE EN EL CONTEXT SE PROPAGA AUTOMATICAMENTE A TODOS LOS COMOPONENTES QUE CONSUMEN DICHO CONTEXTO, SIN NECESIDAD DE USAR USEEFFECT O NADA.
 
 import { createContext, useState } from "react";
+import { app } from "../services/firestore";
+import {getAuth, onAuthStateChanged} from "firebase/auth"
 
  export const cartContext = createContext() //Importamos e inicializamos el context con createContext
 
- export function CartContextProvider(props){ //Esto SI es un componente (un Provider)    
+ export function CartContextProvider(props){ //Esto SI es un componente (un Provider)
+    
+    const auth = getAuth(app)  
 
     const [cart, setCart] = useState([]);
 
@@ -47,13 +51,30 @@ import { createContext, useState } from "react";
         return totalPrice
     }
 
+    const [user, setUser] = useState(null)
+
+    function checkLogin() {
+         onAuthStateChanged(auth, (data) => {
+             console.log(data)
+            if (auth.currentUser != null) {            
+                setUser(true)
+              } else {            
+                setUser(null)
+            }
+          })          
+    }
+
     const value = {        
         itemsInCart,
         addToCart,
         cart,
         clear,
         removeItem,
-        priceInCart
+        priceInCart,
+        user,
+        setUser,
+        checkLogin
+        
     }
     //La prop value es fundamental, a esa prop yo le doy un OBJETO con todas las variables que quiero que sean accecibles para mi App
     return(
