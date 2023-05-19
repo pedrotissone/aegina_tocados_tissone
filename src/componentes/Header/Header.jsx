@@ -24,7 +24,7 @@ function Header(props) {
       navigate("/")			
 			
 		} catch (error) {
-			console.error("Se produjo un error;" + error)			
+			console.error("Se produjo un error  " + error)			
 		}
   }
 
