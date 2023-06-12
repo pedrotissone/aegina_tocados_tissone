@@ -1,0 +1,20 @@
+.crearNuevoProductoDiv {
+    display: flex;
+    justify-content: center;    
+}
+
+.crearNuevoProductoForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.divCategory {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.crearNuevoProductoButton {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100px;
+}
