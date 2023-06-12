@@ -37,11 +37,7 @@ const storagePruebaRef = ref(storage, "fotos/fotoPrueba.jpg")
       navigate("/")			
 			
 		} catch (error) {
-<<<<<<< HEAD
-			console.error("Se produjo un error " + error)			
-=======
 			console.error("Se produjo un error  " + error)			
->>>>>>> nueva-rama
 		}
   }
 
