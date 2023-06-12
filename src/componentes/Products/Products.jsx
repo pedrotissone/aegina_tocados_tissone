@@ -1,13 +1,18 @@
 import React from 'react'
+import "./products.css"
 import {useState, useEffect} from "react"
 // import products from '../../data/data.js' ESTO LO COMENTO XQ AHORA VOY A TRAER LOS PRODUCTOS DE LA "API" CON PROMESAS
 import ProductCard from './ProductCard.jsx'
-import {getItemsOrdered, getItemsByCategory} from '../../services/firestore'
-import { useParams } from "react-router-dom"
+import {getItems, getItemsOrdered, getItemsByCategory} from '../../services/firestore'
+import { useContext } from 'react'
+import { useParams, Link } from "react-router-dom"
+import { cartContext } from '../../context/cartContext.jsx'
 
 
 
 function Products() {
+
+  const { user } = useContext(cartContext)
  
   const [products, setProducts] = useState([])//array vacio para evitar errores
   
@@ -15,12 +20,12 @@ function Products() {
   
   async function getItemsAsync(){
     if (!idCategory){
-      let respuesta = await getItemsOrdered();
-      setProducts(respuesta)
+      let respuesta = await getItems();
+      setProducts(respuesta)           
     } 
     else {
       let respuesta = await getItemsByCategory(idCategory);
-      setProducts(respuesta)
+      setProducts(respuesta)      
     }
     
   }
@@ -37,8 +42,16 @@ function Products() {
   //     })
   //   },[idCategory] //array vacio para indicar que lo hace solo cuando el componente se monta (1 vez)
   // )
-  return (    
-      <>
+  return (
+    <>
+
+    {user && <div className='divCrearNuevoProducto'>
+      <Link to={"/CrearNuevoProducto"}><h2>Crear nuevo producto</h2></Link>
+      <Link to={"/ModificarPrecio"}><h2>Modificar precio de productos</h2></Link>
+      </div>}
+    
+    <div className='divProducts'>      
+        
       
         {products.map((products)=>{
           return (            
@@ -54,7 +67,10 @@ function Products() {
             /> 
           )
           })}        
-      </>    
+      
+
+    </div>
+    </>     
   )
 }
 

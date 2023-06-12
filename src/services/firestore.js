@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, doc, getDoc, query, where, addDoc, orderBy, limit, documentId, setDoc, updateDoc } from "firebase/firestore" //importo las funciones necesarias de Firebase para trabajar con firestore
-import {getAuth, signInWithEmailAndPassword} from "firebase/auth"
+import { getStorage, ref } from "firebase/storage"
 import md5 from "md5";
 
 const firebaseConfig = {
@@ -13,16 +13,15 @@ const firebaseConfig = {
   appId: "1:1061841607513:web:159805b5aaa63d48a44a48"
 };
 
-
 export const app = initializeApp(firebaseConfig);
-const DB = getFirestore(app)
+export const DB = getFirestore(app)
 
 //  export default function testDatabase(){
 //     console.log(app)
 // }
 
 //1 Traer todos los documentos
-export default async function getItems(){
+export async function getItems(){
 //1A Referenciamos nuestra Collection
 const colectionProductsRef = collection(DB, "products");
 //1B Solicitamos todos los documentos de la collection
@@ -43,9 +42,11 @@ return documentsData;
 
 }
 
+//    ESTA FUNCION YA NO LA USO PORQUE ERA UN QUILOMBO MANEJAR LOS INDEX CUANDO EMPEZAS A BORRAR DOCUMENTOS, ASIQUE LOS TRAIGO POR LA INDEXACION QUE HACE FIRESTORE
+
 export async function getItemsOrdered(){   
     const colectionProductsRef = collection(DB, "products");
-    const q = query(colectionProductsRef, orderBy("index"), limit(10))
+    const q = query(colectionProductsRef, orderBy("index"), limit(20))
  
     const documentSnapShot = await getDocs(q);
     // console.log(documentSnapShot.docs[0].data())

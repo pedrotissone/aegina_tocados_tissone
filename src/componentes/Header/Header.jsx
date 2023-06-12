@@ -2,13 +2,26 @@
 import "./header.css"
 import CartWidget from "./CartWidget"
 import { Link, useNavigate } from "react-router-dom"
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { app } from "../../services/firestore";
 import {getAuth, signOut} from "firebase/auth"
+import { getStorage, ref } from "firebase/storage"
 import { cartContext } from "../../context/cartContext";
 
 
-function Header(props) {  
+function Header(props) {
+  
+  //          S T O R A G E
+
+const storage = getStorage() // get the storage instance
+
+const storageRef = ref(storage) // storage reference root
+
+const storagePruebaRef = ref(storage, "fotos/fotoPrueba.jpg")
+
+
+//          S T O R A G E
+
 
   const navigate = useNavigate()
 
@@ -54,6 +67,7 @@ function Header(props) {
      <Link className="headerLink" to="/">
        <h1 className="title">A E G I N A </h1>
        <h2 className="subtitle">Head Pieces</h2>
+       
      </Link>
    </div>
    <Link to="/cart"> <CartWidget counter={props.counter} /> </Link>

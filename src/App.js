@@ -9,9 +9,11 @@ import { CartContextProvider } from './context/cartContext';
 import CartView from './componentes/CartView/CartView';
 import Thankyou from './componentes/Thankyou/Thankyou';
 import FormularioDeAcceso from './componentes/FormularioDeAcceso/FormularioDeAcceso';
+import CrearNuevoProducto from './componentes/Products/CrearNuevoProducto';
 
 
 function App() {
+ 
 
   return (
 
@@ -55,9 +57,10 @@ function App() {
             {/* /detail/:id significa que CUALQUIER COSA! que yo escriba despues de /detail me va a mostrar el componente definido, en el caso el ItemDetailContainer. NOTA: esa ruta dinamica (/:x) React la va a guardar en su memoria */}
             <Route path="/detail/:id" element={<ItemDetailContainer />} />
 
-            <Route path="/category/:idCategory" element={
-              <section className='productSection'>
+            <Route path="/category/:idCategory" element={            
 
+              <section className='productSection'>
+                
                 <Products />
 
               </section>
@@ -66,12 +69,15 @@ function App() {
 
             {/* Yo al marcar /, defino que cuando este en el home voy a mostrar Products, pero cuando me voy a otra ruta desaparece a diferencia que si estuviera dentro del RouteBrowser que apareceria siempre */}
             <Route path="/" element=
-
-              {<section className='productSection'>
-
+              {
                 <Products />
+              }
+            />
 
-              </section>}
+            <Route path='/CrearNuevoProducto' element=
+            {
+              <CrearNuevoProducto />
+            }
             />
 
             {/* Esta ruta * es para probar errores, ya que si no selecciono ninguna de las rutas definidas va a mostrar por defecto esa siempre. Igual la tengo comentada y solo la uso si necesito corroborar que las rutas funcionan o no */}

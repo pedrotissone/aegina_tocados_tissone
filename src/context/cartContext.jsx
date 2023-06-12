@@ -55,7 +55,7 @@ import {getAuth, onAuthStateChanged} from "firebase/auth"
 
     function checkLogin() {
          onAuthStateChanged(auth, (data) => {
-             console.log(data)
+            //  console.log(data)
             if (auth.currentUser != null) {            
                 setUser(true)
               } else {            
