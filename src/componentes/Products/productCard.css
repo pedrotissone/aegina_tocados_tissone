@@ -74,7 +74,12 @@
     border: solid 0.1rem rgba(32, 92, 92, 0.85);
     border-radius: 8px;
     background-color: rgb(32, 144, 144);
-    color: rgb(234, 221, 221);
-    
+    color: rgb(234, 221, 221);    
+}
+
+.volverYGuardarEdicionDiv {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;    
 }
 

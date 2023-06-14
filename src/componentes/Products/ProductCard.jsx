@@ -2,7 +2,8 @@ import React, { useState, useContext } from 'react'
 import "./productCard.css"
 import {Link} from "react-router-dom"
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage"
-import {app, createDoc} from "../../services/firestore"
+import { doc, deleteDoc } from "firebase/firestore"
+import {DB, app, createDoc} from "../../services/firestore"
 import { cartContext } from '../../context/cartContext'
 
 
@@ -16,7 +17,7 @@ function ProductCard( {title, img, description, price, id, discount} ) {
 
   function aplicarCreateDoc() {
     createDoc(cardTitle, cardDescription, cardPrice, cardImg, id)
-    setGuardarEdicion("Refresca la página para ver reflejados los cambios")    
+    setGuardarEdicion("Actualizar cambios")    
   }
   
 
@@ -34,7 +35,7 @@ function ProductCard( {title, img, description, price, id, discount} ) {
 
   const [cardImg, setCardImg] = useState(img)
 
-  const [guardarEdicion, setGuardarEdicion] = useState("Guardar edicion")
+  const [guardarEdicion, setGuardarEdicion] = useState("Guardar")
 
 
   //FUNCIONES PARA MODIFICAR EDICION
@@ -59,7 +60,13 @@ function ProductCard( {title, img, description, price, id, discount} ) {
     const archivoURL = await getDownloadURL(archivoPath) // obtengo el URL de la imagen para descargarla
     setCardImg(archivoURL)
     console.log("Se subio la imagen al Storage") 
-}  
+}
+
+const handleDelete = async () => {
+  await deleteDoc(doc(DB, "products", id))
+  console.log("Se elimino producto: ", id)  
+
+}
   
 
   
@@ -94,7 +101,13 @@ function ProductCard( {title, img, description, price, id, discount} ) {
               <div className='productCardFooter'>
                 <input className='editProductCardFooterPrice'type='text' value={cardPrice} onChange={handleChangePrice}/>
                <Link to={urlDetail}> <button className="productCardFooterButton">Detalle</button></Link>
-               <button onClick={() => aplicarCreateDoc() } className="productCardFooterButton">{guardarEdicion}</button>               
+
+               <div className='volverYGuardarEdicionDiv'>
+               <button className='productCardFooterButton' onClick={() => setEditing(false)}>Volver</button>
+               {guardarEdicion == "Guardar" ? <button onClick={() => aplicarCreateDoc() } className="productCardFooterButton">{guardarEdicion}</button> : <button className='productCardFooterButton' onClick={ () => window.location.reload()}>{guardarEdicion}</button>}
+               </div>
+               
+               <button className='productCardFooterButton' style={{backgroundColor: "red", color: "black"}} onClick={handleDelete}>Eliminar</button>             
               </div>              
                            
             </div>
