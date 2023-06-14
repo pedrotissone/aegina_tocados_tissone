@@ -64,7 +64,8 @@ function ProductCard( {title, img, description, price, id, discount} ) {
 
 const handleDelete = async () => {
   await deleteDoc(doc(DB, "products", id))
-  console.log("Se elimino producto: ", id)  
+  alert("Producto eliminado con éxito")
+  window.location.reload()  
 
 }
   

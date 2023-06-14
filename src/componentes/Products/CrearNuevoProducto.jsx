@@ -59,14 +59,17 @@ function CrearNuevoProducto() { //Primero vamos a probar solo con la imagen y de
            alert("Revise que esten completos todos los campos del formulario")            
         } else {        
             console.log("hola funciona el submit handler")
-            const docRef = addDoc(collection(DB, "products"), { //AddDoc te genera un id automatico con setDoc nesecitas ponerle uno vos o te sale error del even number
+            const docRef = await addDoc(collection(DB, "products"), { //AddDoc te genera un id automatico con setDoc nesecitas ponerle uno vos o te sale error del even number
                 title: title,
                 img: imagenURL,
                 description: description,
                 category: category,
                 price: price               
             })
+            alert("Producto creado con éxito")
+            window.location="/"
         }
+        
     }   
 
     return(
