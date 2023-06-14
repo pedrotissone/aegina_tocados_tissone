@@ -78,7 +78,7 @@ function ProductCard( {title, img, description, price, id, discount} ) {
     return(      
       <div className='productCardDiv'>
             <div className='productCard'>              
-              <input className='productCardImg' type='text' value={cardImg} onChange={handleChangeImg}/>
+              <input className='productCardImg' type='file' onChange={handleChangeImg}/>
               <input className='editProductCardTitle' type='text' value={cardTitle} onChange={handleChangeTitle}/>
               <input className='editProductCardDescription'type='text' value={cardDescription} onChange={handleChangeDescription}/>
               {/* {discount && <small>Descuento: {discount}</small>} */}
