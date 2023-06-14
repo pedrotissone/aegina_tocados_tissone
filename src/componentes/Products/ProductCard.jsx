@@ -1,13 +1,16 @@
 import React, { useState, useContext } from 'react'
 import "./productCard.css"
 import {Link} from "react-router-dom"
-import {createDoc} from "../../services/firestore"
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage"
+import {app, createDoc} from "../../services/firestore"
 import { cartContext } from '../../context/cartContext'
 
 
 //RENDERING CONDICIONAL DE LA PROPIEDAD DESCUENTO USANDO OPERADOR &&
 
-function ProductCard( {title, img, description, price, id, discount} ) {  
+function ProductCard( {title, img, description, price, id, discount} ) {
+  
+  const storage = getStorage(app) // get the storage instance
   
   const urlDetail = `/detail/${id}`;
 
@@ -48,9 +51,15 @@ function ProductCard( {title, img, description, price, id, discount} ) {
     SetCardPrice(event.target.value)    
   }
 
-  const handleChangeImg = (event) => {
-    setCardImg(event.target.value)    
-  }
+  const handleChangeImg =  async (e) => {           
+    const archivo = e.target.files[0]; //Referencia al archivo (le pongo el 0 porque solo voy a cargar uno sino me devuelve un array de files)
+    const nombreArchivo = cardTitle + Math.floor(Math.random() * 1000) //Agrego el random porque Storage me pisa una imagen anterior con la nueva si tiene el mismo nombre     
+    const archivoPath = ref(storage, nombreArchivo) // El path donde se guarda el archivo en el storage
+    await uploadBytes(archivoPath, archivo) // metodo para subir el archivo (Antes solo subia el archivoPath y no me aparecia la imagen por eso le agrege otro argumento que es el archivo)
+    const archivoURL = await getDownloadURL(archivoPath) // obtengo el URL de la imagen para descargarla
+    setCardImg(archivoURL)
+    console.log("Se subio la imagen al Storage") 
+}  
   
 
   

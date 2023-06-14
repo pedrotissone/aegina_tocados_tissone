@@ -26,7 +26,7 @@ export async function getItems(){
 const colectionProductsRef = collection(DB, "products");
 //1B Solicitamos todos los documentos de la collection
 const documentSnapShot = await getDocs(colectionProductsRef);//Necesito extraer la data de este array de documentos
-console.log(documentSnapShot.docs[0].data())
+// console.log(documentSnapShot.docs[0].data())
 
 const documentsData = documentSnapShot.docs.map((doc =>{
     // let docDataWithId = doc.data() //Agrego el id del documento al objeto
