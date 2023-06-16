@@ -22,6 +22,15 @@ function ItemDetail(product) {
 
   }
 
+  function sendMessage() {        
+    const ownerPhoneNumber = '+541163566348'; // Reemplaza con el número de teléfono del dueño del eCommerce
+    const message = `¡Hola! Estoy interesado en el producto ${product.title}, que aparece aquí: ${window.location.href}`;
+    const url = `https://api.whatsapp.com/send?phone=${encodeURIComponent(ownerPhoneNumber)}&text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+};
+
+
+
   return (
     <div className='itemDetailBody'>
       
@@ -43,7 +52,8 @@ function ItemDetail(product) {
               <MyButton >Ir al carrito</MyButton>              
               </Link>
               :
-              <ClickCounter handleAddToCart={handleAddToCart} stock={product.stock} />
+              // <ClickCounter handleAddToCart={handleAddToCart} stock={product.stock} />
+              <ClickCounter sendMessage={sendMessage} stock={product.stock} />
             }
           </div>
         </div>
