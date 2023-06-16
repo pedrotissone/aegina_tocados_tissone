@@ -30,7 +30,7 @@ function ClickCounter(props) {
         <MyButton onClick={handleClickMas} className='clickCounterMas'>+</MyButton>
         </div>
  
-        <button className='clickCounterButtonAgregarAlCarrito' onClick={()=> props.handleAddToCart(count)}>Agregar al Carrito</button>
+        <button className='clickCounterButtonAgregarAlCarrito' onClick={()=> props.handleAddToCart(count)}>Quiero esto!</button>
     
     </div>
 
