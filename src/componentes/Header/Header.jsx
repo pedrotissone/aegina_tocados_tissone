@@ -1,6 +1,5 @@
 
 import "./header.css"
-import CartWidget from "./CartWidget"
 import { Link, useNavigate } from "react-router-dom"
 import { useEffect, useContext } from "react";
 import { app } from "../../services/firestore";
