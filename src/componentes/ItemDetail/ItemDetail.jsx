@@ -9,23 +9,22 @@ import MyButton from '../MyButton/MyButton'
 
 
 function ItemDetail(product) {
-  const [isInCart, setIsInCart] = useState(false)
-  const { addToCart } = useContext(cartContext) //Uso destructuring para sacar la unica variable que quiero de el context
+  // const [isInCart, setIsInCart] = useState(false)
+  // const { addToCart } = useContext(cartContext) //Uso destructuring para sacar la unica variable que quiero de el context
   
   // otra opcion
   // const addToCart = useContext(cartContext).addToCart
 
 
-  function handleAddToCart(count) {
-    setIsInCart(count)
-    addToCart(product, count)
-
-  }
+  // function handleAddToCart(count) {
+  //   setIsInCart(count)
+  //   addToCart(product, count)
+  // }
 
   function sendMessage() {        
-    const ownerPhoneNumber = '+541163566348'; // Reemplaza con el número de teléfono del dueño del eCommerce
+    const ownerPhoneNumber = '541163566348'; // Reemplaza con el número de teléfono del dueño del eCommerce
     const message = `¡Hola! Estoy interesado en el producto ${product.title}, que aparece aquí: ${window.location.href}`;
-    const url = `https://api.whatsapp.com/send?phone=${encodeURIComponent(ownerPhoneNumber)}&text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/${ownerPhoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
 };
 
@@ -34,9 +33,9 @@ function ItemDetail(product) {
   return (
     <div className='itemDetailBody'>
       
-      <div className='itemDetailCart'>
+      {/* <div className='itemDetailCart'>
           <CartWidget />
-        </div>
+        </div> */}
 
       <div className='itemDetailDivContainer'>
         <img className='itemDetailImg' src={product.img} alt={product.description} />
@@ -44,18 +43,13 @@ function ItemDetail(product) {
         <p className='itemDetailDescription'>{product.description}</p>
         <h2 className='itemDetailPrice'>$ {product.price}</h2>
 
-        <div className='itemDetailDiv'>        
-          <div className='itemDetailCounter'>
-            {
-              isInCart ?
-              <Link className="itemDetailCarrito" to="/cart">
-              <MyButton >Ir al carrito</MyButton>              
-              </Link>
-              :
-              // <ClickCounter handleAddToCart={handleAddToCart} stock={product.stock} />
-              <ClickCounter sendMessage={sendMessage} stock={product.stock} />
-            }
+        <div className='itemDetailDiv'> 
+
+          <div className='itemDetailCounter'>             
+              {/* <ClickCounter sendMessage={sendMessage} stock={product.stock} /> */}
+              <button className='itemDetailButtonMessage' onClick={sendMessage}>Quiero esto!</button>            
           </div>
+
         </div>
 
       </div>

@@ -70,6 +70,7 @@ function Header(props) {
 
         </Link>
       </div>
+      
       {/* <Link to="/cart"> <CartWidget counter={props.counter} /> </Link> */}
 
     </div>
