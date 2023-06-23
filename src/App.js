@@ -27,15 +27,7 @@ function App() {
 
             <Header />
 
-          </header>    
-
-
-          {/* <main className='main'>
-
-            <NavBarContainer />
-
-          </main> */}
-
+          </header>   
 
           <Routes>
 
