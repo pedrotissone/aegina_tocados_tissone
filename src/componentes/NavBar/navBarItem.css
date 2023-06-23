@@ -4,7 +4,7 @@
     flex-direction: column;
     
 }
-.itemTitle{
+.categoryTitle{
     margin: 1rem;
     cursor: pointer;    
     color: rgb(236, 221, 221);
@@ -12,14 +12,14 @@
   
 }
 
-.itemTitle:hover{    
+.categoryTitle:hover{    
     text-decoration: underline;
 }
 
 .navBarImg{
-    margin-top: 1.5rem;
-    width: 400px;
-    height: 400px;
+    margin-top: 1.5rem;    
+    width: 380px;
+    height: 380px;
 }
 
                                                                 /* NavBarItem Media Queries */

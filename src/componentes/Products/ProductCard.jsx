@@ -95,12 +95,12 @@ const handleDelete = async () => {
     return(      
       <div className='productCardDiv'>
             <div className='productCard'>              
-              <input className='productCardImg' type='file' onChange={handleChangeImg}/>
+              <input className='editProductCardImg' type='file' onChange={handleChangeImg}/>
               <input className='editProductCardTitle' type='text' value={cardTitle} onChange={handleChangeTitle}/>
               <input className='editProductCardDescription'type='text' value={cardDescription} onChange={handleChangeDescription}/>
               {/* {discount && <small>Descuento: {discount}</small>} */}
               <div className='productCardFooter'>
-                <input className='editProductCardFooterPrice'type='text' value={cardPrice} onChange={handleChangePrice}/>
+                <input className='editProductCardFooterPrice'type='number' value={cardPrice} onChange={handleChangePrice}/>
                <Link to={urlDetail}> <button className="productCardFooterButton">Detalle</button></Link>
 
                <div className='volverYGuardarEdicionDiv'>

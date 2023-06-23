@@ -73,34 +73,37 @@ function CrearNuevoProducto() { //Primero vamos a probar solo con la imagen y de
     }   
 
     return(
-        <div className="crearNuevoProductoDiv">    
+        <>
+
+        <h3 className="titleForm">Nuevo Producto</h3>    
+        <div className="crearNuevoProductoDiv">            
         
         <form className="crearNuevoProductoForm" onSubmit={submitHandler}>                  
             
 
-            <label htmlFor="name">Nombre del producto</label>
-            <input type="text" id="name" onChange={titleHandler}/>
+            <label className="crearNuevoProductoLabel" htmlFor="name">Nombre del producto</label>
+            <input className="crearNuevoProductoInputTitle" type="text" id="name" onChange={titleHandler}/>
 
-            <label htmlFor="description">Descripción del producto</label>
-            <input type="text" id="description" onChange={handleDescription}/>
+            <label className="crearNuevoProductoLabel" htmlFor="description">Descripción del producto</label>
+            <input className="crearNuevoProductoInputDescription" type="text" id="description" onChange={handleDescription}/>
 
-            <label>Seleccione la categoria del producto</label>           
+            <label className="crearNuevoProductoLabel">Seleccione la categoria del producto</label>           
            
-            <label htmlFor="Flores preservadas">Flores preservadas</label>
+            <label className="crearNuevoProductoLabel" htmlFor="Flores preservadas">Flores preservadas</label>
             <input type="radio" id="Flores preservadas" name="category" value="Flores preservadas" checked={category == "Flores preservadas"} onChange={handleCategory}></input>           
             
-            <label htmlFor="Piedras">Piedras</label>
+            <label className="crearNuevoProductoLabel" htmlFor="Piedras">Piedras</label>
             <input type="radio" id="Piedras" name="category" value="Piedras" checked={category == "Piedras"} onChange={handleCategory}></input>          
             
-            <label htmlFor="Porcelana fria">Porcelana fria</label>
+            <label className="crearNuevoProductoLabel" htmlFor="Porcelana fria">Porcelana fria</label>
             <input type="radio" id="Porcelana fria" name="category" value="Porcelana fria" checked={category == "Porcelana fria"} onChange={handleCategory}></input>    
            
            
-            <label htmlFor="price">Precio del producto</label>
-            <input type="number" id="price" onChange={handlePrice}></input>
+            <label className="crearNuevoProductoLabel" htmlFor="price">Precio del producto</label>
+            <input className="crearNuevoProductoInputPrice" type="number" id="price" onChange={handlePrice}></input>
 
-            <label htmlFor="selectImg">Seleccione la imagen del producto</label>            
-            <input type="file" id="selectImg" disabled={!title} onChange={fileHandler}/>       
+            <label className="crearNuevoProductoLabel" htmlFor="selectImg">Seleccione la imagen del producto</label>            
+            <input className="crearNuevoProductoInputImagen" type="file" id="selectImg" disabled={!title} onChange={fileHandler}/>       
 
 
             <button className="crearNuevoProductoButton">Confirmar</button>
@@ -108,6 +111,7 @@ function CrearNuevoProducto() { //Primero vamos a probar solo con la imagen y de
         </form>
 
         </div>
+        </>
     )
 }
 

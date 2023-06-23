@@ -1,14 +1,38 @@
-.header{
-    display: flex;    
+.headerDivContainer {
+    display: flex;
+    flex-direction: column;    
 }
 
-.headerAccess {
+.headerAccessDiv {
+    display: flex;
+
+}
+
+.headerAccessName {
     margin-top: 1rem;
+    font-family: 'Caveat', cursive;
+    color: whitesmoke;
+    font-size: larger;
+}
+
+.headerSignOutButton {
+    padding: 0.2rem;    
+    cursor: pointer;    
+    margin-top:1.5rem;
+    border: solid 0.1rem rgba(32, 92, 92, 0.85);
+    border-radius: 8px;
+    background-color: rgb(32, 144, 144);
+    color: rgb(234, 221, 221);
+    width: 100%;
+}
+
+.headerTitleDiv{
+    display: flex;
+    justify-content: center;       
 }
 
 
-.headerTitle{
-    margin: auto;
+.headerTitle{    
     display: flex;
     flex-direction: column;      
     text-align: center;
@@ -25,15 +49,12 @@
 }
 
 .title{
-    font-size: 4rem;
-    margin-left: 4.9rem;  
+    font-size: 6rem;    
 }
 
 .subtitle{
-    font-size: 2.7rem;
-    font-family: 'Caveat', cursive;
-    margin-bottom: 3.5rem;
-    margin-left: 4.9rem;  
+    font-size: 3rem;
+    font-family: 'Caveat', cursive;    
 }
 
 

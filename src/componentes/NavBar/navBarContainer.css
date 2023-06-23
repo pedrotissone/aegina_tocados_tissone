@@ -4,5 +4,32 @@
     flex-wrap: wrap;
     justify-content:space-around;    
     background-color: rgb(46, 78, 78);
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+.divCrearNuevoProducto {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+}
+
+.crearNuevoProducto {
+    color: whitesmoke;
+    font-family: 'Caveat', cursive;
+    font-size: 2.3rem;    
+}
+
+.crearNuevoProducto:hover {
+    text-decoration: underline;
+}
+
+.modificarPrecioDeProductos {
+    color: whitesmoke;
+    font-family: 'Caveat', cursive;
+    font-size: 2.3rem;    
+}
+
+.modificarPrecioDeProductos:hover {
+    text-decoration: underline;
 }

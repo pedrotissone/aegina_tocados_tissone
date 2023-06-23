@@ -1,25 +1,17 @@
 import React from 'react'
-import ClickCounter from '../ClickCounter/ClickCounter'
-import CartWidget from '../Header/CartWidget'
 import "./itemDetail.css"
-import { useContext, useState } from "react" //Importo Hooks
-import { cartContext } from "../../context/cartContext"
-import {Link} from "react-router-dom"
-import MyButton from '../MyButton/MyButton'
+import {useNavigate} from "react-router-dom"
+import { FaWhatsapp } from "react-icons/fa"
+
 
 
 function ItemDetail(product) {
-  // const [isInCart, setIsInCart] = useState(false)
-  // const { addToCart } = useContext(cartContext) //Uso destructuring para sacar la unica variable que quiero de el context
-  
-  // otra opcion
-  // const addToCart = useContext(cartContext).addToCart
 
+  const navigate = useNavigate()
 
-  // function handleAddToCart(count) {
-  //   setIsInCart(count)
-  //   addToCart(product, count)
-  // }
+  const navigateBack = () => {
+    navigate(-1)
+  }  
 
   function sendMessage() {        
     const ownerPhoneNumber = '541166142146'; // Reemplaza con el número de teléfono del dueño del eCommerce
@@ -29,13 +21,9 @@ function ItemDetail(product) {
 };
 
 
-
   return (
-    <div className='itemDetailBody'>
+    <div className='itemDetailBody'> 
       
-      {/* <div className='itemDetailCart'>
-          <CartWidget />
-        </div> */}
 
       <div className='itemDetailDivContainer'>
         <img className='itemDetailImg' src={product.img} alt={product.description} />
@@ -46,8 +34,10 @@ function ItemDetail(product) {
         <div className='itemDetailDiv'> 
 
           <div className='itemDetailCounter'>             
-              {/* <ClickCounter sendMessage={sendMessage} stock={product.stock} /> */}
-              <button className='itemDetailButtonMessage' onClick={sendMessage}>Quiero esto!</button>            
+              
+              <button className='itemDetailButtonMessage' onClick={sendMessage}>Quiero esto! <FaWhatsapp/></button>
+              <button className='itemDetailButtonVolver' onClick={navigateBack}>Volver</button>
+
           </div>
 
         </div>

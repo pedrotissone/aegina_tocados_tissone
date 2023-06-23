@@ -6,8 +6,6 @@ import Products from './componentes/Products/Products';
 import ItemDetailContainer from './componentes/ItemDetail/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; //Importamos de la libreria los tres componentes necesarios
 import { CartContextProvider } from './context/cartContext';
-import CartView from './componentes/CartView/CartView';
-import Thankyou from './componentes/Thankyou/Thankyou';
 import FormularioDeAcceso from './componentes/FormularioDeAcceso/FormularioDeAcceso';
 import CrearNuevoProducto from './componentes/Products/CrearNuevoProducto';
 
@@ -23,31 +21,30 @@ function App() {
 
       <BrowserRouter>
 
-        <div className="App">
-          
-          
-          
-
+        <div className="App">        
+  
           <header>
 
             <Header />
 
-          </header>
+          </header>    
 
-        
 
-         
-
-          <main className='main'>
+          {/* <main className='main'>
 
             <NavBarContainer />
 
-          </main>
+          </main> */}
 
 
           <Routes>
 
-           
+            <Route path='/' element={ 
+
+              <main className='main'>
+                <NavBarContainer />  
+              </main>
+             }/>           
 
             <Route path='/Formulario' element={ <FormularioDeAcceso /> }/>
 
@@ -57,22 +54,22 @@ function App() {
             {/* /detail/:id significa que CUALQUIER COSA! que yo escriba despues de /detail me va a mostrar el componente definido, en el caso el ItemDetailContainer. NOTA: esa ruta dinamica (/:x) React la va a guardar en su memoria */}
             <Route path="/detail/:id" element={<ItemDetailContainer />} />
 
-            <Route path="/category/:idCategory" element={            
-
-              <section className='productSection'>
-                
-                <Products />
-
-              </section>
+            <Route path="/category/:idCategory" element={
+              <>
+                <main className='main'>
+                  <NavBarContainer />  
+                </main>       
+                <Products />              
+              </>  
             }
             />
 
-            {/* Yo al marcar /, defino que cuando este en el home voy a mostrar Products, pero cuando me voy a otra ruta desaparece a diferencia que si estuviera dentro del RouteBrowser que apareceria siempre */}
-            <Route path="/" element=
+         
+            {/* <Route path="/" element=
               {
                 <Products />
               }
-            />
+            /> */}
 
             <Route path='/CrearNuevoProducto' element=
             {

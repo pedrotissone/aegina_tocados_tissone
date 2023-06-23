@@ -43,12 +43,12 @@ function FormularioDeAcceso() {
 
 	return(
 		
-		<div className="FormDiv" onSubmit={handleSubmit}>
+		<div className="formDiv" onSubmit={handleSubmit}>
 			
-				<form className="FormularioDeAcceso">
-			<input className="FormUser" type="text" placeholder="Nombre de usuario" onChange={handleUserNameChange}/>
-			<input className="FormPassword" type="password" placeholder="Contraseña" onChange={handlePasswordChange}/>
-			<button type="submit">Confirmar</button>
+				<form className="formularioDeAcceso">
+			<input className="formUser" type="text" placeholder="Nombre de usuario" onChange={handleUserNameChange}/>
+			<input className="formPassword" type="password" placeholder="Contraseña" onChange={handlePasswordChange}/>
+			<button className="formButton" type="submit">Confirmar</button>
 		</form>	
 		
 

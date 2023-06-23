@@ -16,8 +16,6 @@ function Header(props) {
 
   const storageRef = ref(storage) // storage reference root
 
-  const storagePruebaRef = ref(storage, "fotos/fotoPrueba.jpg")
-
 
   //          S T O R A G E
 
@@ -46,31 +44,31 @@ function Header(props) {
 
 
   return (
+    <div className="headerDivContainer">
 
-    <div className="header">
+      <div className="headerAccessDiv">
+        {
+          user == null ?
 
-      {
-        user == null ?
-
-          <Link to="/Formulario">
-            <p className="headerAccess">Acceso</p>
-          </Link>
-          :
-          <div>
-            <p className="headerAccess">Usuario: Jopi</p>
-            <button type="button" onClick={handleSignOut} >Cerrar Sesión</button>
-          </div>
-      }
-
-      <div className="headerTitle">
-        <Link className="headerLink" to="/">
-          <h1 className="title">A E G I N A </h1>
-          <h2 className="subtitle">Head Pieces</h2>
-
-        </Link>
+            <Link to="/Formulario">
+              <p className="headerAccess">Acceso</p>
+            </Link>
+            :
+            <div>
+              <p className="headerAccessName">Bienvenida Jopi</p>
+              <button className="headerSignOutButton" type="button" onClick={handleSignOut} >Cerrar Sesión</button>
+            </div>
+        }
       </div>
-      
-      {/* <Link to="/cart"> <CartWidget counter={props.counter} /> </Link> */}
+
+      <div className="headerTitleDiv">
+        <div className="headerTitle">
+          <Link className="headerLink" to="/">
+            <h1 className="title">A E G I N A </h1>
+            <h2 className="subtitle">Head Pieces</h2>
+          </Link>
+        </div>
+      </div>
 
     </div>
   )
