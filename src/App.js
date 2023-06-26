@@ -8,6 +8,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'; //Importamos de
 import { CartContextProvider } from './context/cartContext';
 import FormularioDeAcceso from './componentes/FormularioDeAcceso/FormularioDeAcceso';
 import CrearNuevoProducto from './componentes/Products/CrearNuevoProducto';
+import Carrousel from './componentes/Carrousel/Carrousel';
+import Footer from './componentes/Footer/Footer';
 
 
 function App() {
@@ -15,8 +17,7 @@ function App() {
 
   return (
 
-    <CartContextProvider>
-       
+    <CartContextProvider>       
       
 
       <BrowserRouter>
@@ -24,44 +25,56 @@ function App() {
         <div className="App">        
   
           <header>
-
             <Header />
+          </header> 
 
-          </header>   
 
           <Routes>
 
-            <Route path='/' element={ 
+            <Route path='/' element={
 
+              <>
               <main className='main'>
                 <NavBarContainer />  
+                <Carrousel/>
               </main>
+              <footer className='footer'>
+                <Footer/>
+              </footer>              
+              </>             
+              
              }/>           
 
-            <Route path='/Formulario' element={ <FormularioDeAcceso /> }/>
-
-            
+            <Route path='/Formulario' element={
+               
+               <FormularioDeAcceso />
+               
+                }/>            
 
 
             {/* /detail/:id significa que CUALQUIER COSA! que yo escriba despues de /detail me va a mostrar el componente definido, en el caso el ItemDetailContainer. NOTA: esa ruta dinamica (/:x) React la va a guardar en su memoria */}
-            <Route path="/detail/:id" element={<ItemDetailContainer />} />
+            <Route path="/detail/:id" element={
+            <>
+              <ItemDetailContainer />
+              <footer className='footer'>
+                <Footer/>
+              </footer>
+            </>
+                      }/>
 
             <Route path="/category/:idCategory" element={
               <>
                 <main className='main'>
-                  <NavBarContainer />  
+                  <NavBarContainer />
+                  <center><h2 className="galeriaTitle">Happiness is only real when shared</h2></center>    
                 </main>       
-                <Products />              
+                <Products />
+                <footer className='footer'>
+                  <Footer/>
+                </footer>              
               </>  
             }
-            />
-
-         
-            {/* <Route path="/" element=
-              {
-                <Products />
-              }
-            /> */}
+            />           
 
             <Route path='/CrearNuevoProducto' element=
             {
@@ -70,22 +83,8 @@ function App() {
             />
 
             {/* Esta ruta * es para probar errores, ya que si no selecciono ninguna de las rutas definidas va a mostrar por defecto esa siempre. Igual la tengo comentada y solo la uso si necesito corroborar que las rutas funcionan o no */}
-            <Route path="*" element={<h1><center>ERROR 404: La ruta definida no existe</center></h1>} />
-
-            {/* <Route path='/cart' element=
-            {
-            <>
-                     
-              <CartView/>
-            
-            </>
-            }/> */}
-
-            {/* <Route path="/thankyou/:idOrder" element={<Thankyou />} /> */}
-
-
-
-
+            <Route path="*" element={<h1 className='paginaEnConstruccion'>Página en construcción</h1>} />
+      
           </Routes>
 
         </div>

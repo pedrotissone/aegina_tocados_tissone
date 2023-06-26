@@ -21,7 +21,7 @@
     margin-top:1.5rem;
     border: solid 0.1rem rgba(32, 92, 92, 0.85);
     border-radius: 8px;
-    background-color: rgb(32, 144, 144);
+    background-color: rgb(32, 144, 144);    
     color: rgb(234, 221, 221);
     width: 100%;
 }
@@ -36,7 +36,8 @@
     display: flex;
     flex-direction: column;      
     text-align: center;
-    color: #205c5c;
+    /* color: #205c5c; */
+    color: rgb(14, 83, 83);    
 }
 
 
@@ -45,16 +46,19 @@
 }
 
 .headerLink:hover{
-    color: whitesmoke
+    color: whitesmoke;
+    text-decoration: underline;
 }
 
 .title{
-    font-size: 6rem;    
+    font-size: 6rem;
+    font-weight: lighter;       
 }
 
 .subtitle{
     font-size: 3rem;
-    font-family: 'Caveat', cursive;    
+    font-family: 'Caveat', cursive;
+    font-weight: lighter;      
 }
 
 

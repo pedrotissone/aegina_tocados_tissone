@@ -4,7 +4,14 @@
     margin: auto;
     width: 40vw;
     margin-bottom: 1rem;       
-} 
+}
+
+.itemDetailBody {
+    /* background-color: rgb(14, 83, 83);
+    border: 0.1rem solid whitesmoke; */
+    border-top: 0.1rem solid rgb(14, 83, 83);
+    border-bottom: 0.1rem solid rgb(14, 83, 83);
+}
 
 .itemDetailDivContainer{
     display: flex;

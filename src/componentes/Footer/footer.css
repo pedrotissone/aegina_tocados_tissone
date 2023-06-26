@@ -1,0 +1,8 @@
+.footerTextDiv {
+    display: flex;    
+}
+
+.footerText {
+    color: whitesmoke;
+    font-weight: lighter;
+}
