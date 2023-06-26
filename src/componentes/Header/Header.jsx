@@ -29,7 +29,7 @@ function Header(props) {
   async function handleSignOut() {
     try {
       await signOut(auth)
-      console.log("Cerraste session")
+      console.log("Cerraste session!")
       setUser(null)
       navigate("/")
 
