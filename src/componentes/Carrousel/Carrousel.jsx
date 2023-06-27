@@ -15,7 +15,7 @@ const Carrousel = () => {
     
       return(
         <>
-        <center><h2 className="galeriaTitle">Happiness is only real when shared</h2></center>       
+        {/* <center><h2 className="galeriaTitle">Happiness is only real when shared</h2></center>        */}
         <Slider {...settings}>
           <div>
             <img className="carrouselImagenes" src="/img/carrousel1.jpg"/>

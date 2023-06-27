@@ -22,7 +22,20 @@
     height: 380px;
 }
 
-                                                                /* NavBarItem Media Queries */
+                                                        /* MEDIA QUERIES */
+
+@media (max-width: 1145px) {
+    .navBarImg {
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .categoryTitle {
+        font-size: 0.8rem;
+    }    
+}
+
+
 
 
 

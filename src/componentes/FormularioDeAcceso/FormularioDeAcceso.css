@@ -37,3 +37,12 @@
 .formButton {
     width: 20rem;
 }
+
+                                                        /* MEDIA QUERIES */
+
+@media (max-width: 346px) {
+    
+    .formUser, .formPassword, .formButton {
+        width: 15rem;       
+    }
+}

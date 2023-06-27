@@ -61,6 +61,45 @@
     font-weight: lighter;      
 }
 
+                                                        /* MEDIA QUERIES */
+
+@media (max-width: 478px ) {
+
+    .title {
+        font-size: 3.7rem;
+    }
+
+    .subtitle {
+        font-size: 1.8rem;
+    }
+
+    .headerAccess {
+        font-size: 0.8rem;
+    }
+
+    .headerAccessName {
+        font-size: 1rem;
+    }
+
+    .headerSignOutButton{
+        font-size: 0.6rem;
+        padding: 0;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 288px) {
+
+    .title {
+        font-size: 3.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+}
+
 
 
 

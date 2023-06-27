@@ -34,3 +34,25 @@
 .modificarPrecioDeProductos:hover {
     text-decoration: underline;
 }
+
+                                                                    /* MEDIA QUERIES */
+
+@media (max-width: 1145px) {
+
+.crearNuevoProducto, .modificarPrecioDeProductos {
+    font-size: 1.7rem;
+}
+}
+
+@media (max-width: 867px) {
+    .navBar {
+        justify-content: space-evenly;
+    }
+    
+    .divCrearNuevoProducto {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+                                                       
