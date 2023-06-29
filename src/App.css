@@ -60,6 +60,12 @@ body{
 @media (max-width: 465px) {
 
   .galeriaTitle {
-    font-size: 2rem;
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width:320px) {
+  .galeriaTitle {
+    font-size: 1.6rem;
   }
 }

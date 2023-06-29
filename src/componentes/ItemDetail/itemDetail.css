@@ -7,10 +7,9 @@
 }
 
 .itemDetailBody {
-    /* background-color: rgb(14, 83, 83);
-    border: 0.1rem solid whitesmoke; */
     border-top: 0.1rem solid rgb(14, 83, 83);
     border-bottom: 0.1rem solid rgb(14, 83, 83);
+    width: 100%;
 }
 
 .itemDetailDivContainer{
@@ -18,15 +17,15 @@
     flex-direction: column;
     align-items: center;
     margin: auto;
-    width: 40vw;
+    width: 598px;
     margin-top: 3rem;
     margin-bottom: 2rem;
-    background-color: rgba(218, 213, 213, 0.742);   
+    background-color: rgba(218, 213, 213, 0.742);  
 }
 
 .itemDetailImg{
     align-self: center;
-    width: 40vw;
+    width: 598px
 }
 
 .itemDetailTitle{
@@ -34,6 +33,7 @@
     margin-bottom: 1rem;     
     color: rgb(87, 83, 83);
     font-size: 2.8rem; 
+    font-weight: lighter;
 }
 
 .itemDetailDescription{
@@ -50,6 +50,7 @@
     color: rgb(109, 105, 105);
     font-size: 2rem;
     font-weight: lighter;
+    font-family: emoji;
 }
 
 .clickCounterDiv{
@@ -82,4 +83,53 @@
     background-color: rgb(32, 144, 144);
     color: rgb(234, 221, 221);
     width: 100%;
+}
+
+@media (max-width: 671px) {
+
+    .itemDetailDivContainer, .itemDetailImg {
+        width: 400px;
+    }
+
+    .itemDetailTitle {
+        font-size: 2.3rem;
+    }
+
+    .itemDetailDescription {
+        font-size: 1.2rem;
+    }
+
+    .itemDetailPrice {
+        font-size: 1.6rem;
+    }
+
+}
+
+@media (max-width:455px) {
+
+    .itemDetailDivContainer, .itemDetailImg {
+        width: 300px;
+    }
+
+    .itemDetailTitle {
+        font-size: 1.8rem;
+        margin-bottom: 0.1rem;
+    }
+
+    .itemDetailDescription {
+        font-size: 1rem;
+    }
+
+    .itemDetailPrice {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .itemDetailButtonMessage, .itemDetailButtonVolver {
+        font-size: 0.7rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+
+    }
+
 }

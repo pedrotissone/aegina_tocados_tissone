@@ -10,3 +10,11 @@
     flex-flow: row wrap;
     justify-content: space-around;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width:402px) {
+    .divProducts {
+        width: 100%;
+    }
+}

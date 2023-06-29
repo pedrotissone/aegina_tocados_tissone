@@ -20,6 +20,7 @@
     margin-top: 1.5rem;    
     width: 380px;
     height: 380px;
+    border-radius: 25px;
 }
 
                                                         /* MEDIA QUERIES */
@@ -33,6 +34,25 @@
     .categoryTitle {
         font-size: 0.8rem;
     }    
+}
+
+@media (max-width: 873px) {
+    .navBarImg {
+        width: 13rem;
+        height: 13rem;
+    }
+}
+
+@media (max-width: 627px) {  
+
+    .navBarImg {
+        border-radius: 100px;
+    }
+
+    .categoryTitle {        
+        font-weight: bolder;
+    }    
+
 }
 
 
