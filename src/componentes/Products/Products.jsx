@@ -3,10 +3,7 @@ import "./products.css"
 import {useState, useEffect} from "react"
 import ProductCard from './ProductCard.jsx'
 import {getItems, getItemsByCategory} from '../../services/firestore'
-import { useContext } from 'react'
-import { useParams, Link } from "react-router-dom"
-import { cartContext } from '../../context/cartContext.jsx'
-
+import { useParams } from "react-router-dom"
 
 
 function Products() {
