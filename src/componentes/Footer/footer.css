@@ -5,7 +5,14 @@
 .footerText {
     color: whitesmoke;
     font-weight: lighter;
+    cursor: pointer;
 }
+
+.footerText:hover {
+    text-decoration: underline;
+}
+
+
 
 /* MEDIA QUERIES */
 

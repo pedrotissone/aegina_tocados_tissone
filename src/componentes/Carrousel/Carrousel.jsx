@@ -18,13 +18,13 @@ const Carrousel = () => {
         {/* <center><h2 className="galeriaTitle">Happiness is only real when shared</h2></center>        */}
         <Slider {...settings}>
           <div>
-            <img className="carrouselImagenes" src="/img/carrousel1.jpg"/>
+            <img className="carrouselImagenes" src="/img/carrousel1.jpg" alt="Tocado de flores en sombrero"/>
           </div>
           <div>
-          <img className="carrouselImagenes" src="/img/carrousel2.jpg"/>
+          <img className="carrouselImagenes" src="/img/carrousel2.jpg" alt="Flores preservadas"/>
           </div>
           <div>
-          <img className="carrouselImagenes" src="/img/carrousel3.jpg"/>
+          <img className="carrouselImagenes" src="/img/carrousel3.jpg" alt="Niña con corona de flores"/>
           </div>
         </Slider>
         </>         

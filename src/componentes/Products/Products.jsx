@@ -39,7 +39,7 @@ function Products() {
       <Link to={"/ModificarPrecio"}><h2>Modificar precio de productos</h2></Link>
       </div>} */}
     
-    <div className='divProducts'>      
+    <section className='divProducts'>      
         
       
         {products.map((products)=>{
@@ -58,7 +58,7 @@ function Products() {
           })}        
       
 
-    </div>
+    </section>
     </>     
   )
 }

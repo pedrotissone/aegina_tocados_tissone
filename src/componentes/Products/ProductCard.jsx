@@ -65,13 +65,11 @@ function ProductCard( {title, img, description, price, id, discount} ) {
 const handleDelete = async () => {
   await deleteDoc(doc(DB, "products", id))
   alert("Producto eliminado con éxito")
-  window.location.reload()  
-
-}
-  
+  window.location.reload()
+} 
 
   
-  if (editing == false) {
+  if (editing === false) {
   return (    
     <div className='productCardDiv'>
             <div className='productCard'>
@@ -105,7 +103,7 @@ const handleDelete = async () => {
 
                <div className='volverYGuardarEdicionDiv'>
                <button className='productCardFooterButton' onClick={() => setEditing(false)}>Volver</button>
-               {guardarEdicion == "Guardar" ? <button onClick={() => aplicarCreateDoc() } className="productCardFooterButton">{guardarEdicion}</button> : <button className='productCardFooterButton' onClick={ () => window.location.reload()}>{guardarEdicion}</button>}
+               {guardarEdicion === "Guardar" ? <button onClick={() => aplicarCreateDoc() } className="productCardFooterButton">{guardarEdicion}</button> : <button className='productCardFooterButton' onClick={ () => window.location.reload()}>{guardarEdicion}</button>}
                </div>
                
                <button className='productCardFooterButton' style={{backgroundColor: "red", color: "black"}} onClick={handleDelete}>Eliminar</button>             

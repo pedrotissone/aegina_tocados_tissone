@@ -36,7 +36,7 @@ function App() {
               <>
               <main className='main'>
                 <NavBarContainer />
-                <center><h2 className="galeriaTitle">Happiness is only real when shared</h2></center>   
+                <h2 className="galeriaTitle">Happiness is only real when shared</h2> 
                 <Carrousel/>
               </main>
               <footer className='footer'>
@@ -67,7 +67,7 @@ function App() {
               <>
                 <main className='main'>
                   <NavBarContainer />
-                  <center><h2 className="galeriaTitle">Happiness is only real when shared</h2></center>    
+                  <h2 className="galeriaTitle">Happiness is only real when shared</h2> 
                 </main>       
                 <Products />
                 <footer className='footer'>
