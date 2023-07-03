@@ -8,7 +8,8 @@
  }
 
 body{
-  background-color: rgba(128, 128, 128, 0.601);
+  /* background-color: rgba(128, 128, 128, 0.601); */
+  background-color: rgb(221, 195, 195);
 }
 
 .App {
@@ -33,7 +34,7 @@ body{
 }
 
 .galeriaTitle {
-  color: whitesmoke;
+  color: rgb(78, 13, 163);
   font-weight: lighter;    
   font-size: 3rem;  
   margin-bottom: 2rem;

@@ -8,6 +8,10 @@
 
 }
 
+.headerAccess {
+    color: black;
+}
+
 .headerAccessName {
     margin-top: 1rem;
     font-family: 'Caveat', cursive;
