@@ -27,7 +27,7 @@ function Footer() {
             
             <div className="footerTextDiv">
             < BiLogoInstagramAlt style={{height:"20.8px", color:"whitesmoke"}}/>
-            <p className="footerText" onClick={handleClickInstagram}> Instagram</p>
+            <p className="footerText" onClick={handleClickInstagram}> I N S T A G R A M</p>
             </div>            
             <div className="footerTextDiv">
             <p className="footerText">Aegina Head Pieces Copyright 2023</p>

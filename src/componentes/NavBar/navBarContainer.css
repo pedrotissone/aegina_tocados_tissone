@@ -78,13 +78,13 @@
     }
 
     .navBarLink1:hover, .navBarLink2:hover, .navBarLink3:hover {
-        background-color: rgb(14, 83, 83);
+        background-color: rgba(221, 195, 195, 0.752);
 
     }
     .navBar {       
         flex-direction: column;
         align-items: center;
-        background-color: rgb(178 178 178);                  
+        /* background-color: rgb(178 178 178);                   */
     }
     
 }
