@@ -40,7 +40,7 @@ function CrearNuevoProducto() { //Primero vamos a probar solo con la imagen y de
     }
 
     const handlePrice = (e) => {
-        setPrice(e.target.value)
+        setPrice(parseInt(e.target.value))
     }    
  
     const fileHandler =  async (e) => {           

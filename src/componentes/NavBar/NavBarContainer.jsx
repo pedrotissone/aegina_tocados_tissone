@@ -24,7 +24,7 @@ function NavBarContainer(props) {
       
       {user && <div className='divCrearNuevoProducto'>
       <Link to={"/CrearNuevoProducto"}><h2 className="crearNuevoProducto">Crear nuevo producto</h2></Link>
-      <Link to={"/ModificarPrecio"}><h2 className="modificarPrecioDeProductos">Modificar precio de productos</h2></Link>
+      <Link to={"/ModificarPrecioDeProductos"}><h2 className="modificarPrecioDeProductos">Modificar precio de productos</h2></Link>
       </div>}      
     </>
   )

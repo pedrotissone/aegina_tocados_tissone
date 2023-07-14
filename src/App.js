@@ -10,6 +10,7 @@ import FormularioDeAcceso from './componentes/FormularioDeAcceso/FormularioDeAcc
 import CrearNuevoProducto from './componentes/Products/CrearNuevoProducto';
 import Carrousel from './componentes/Carrousel/Carrousel';
 import Footer from './componentes/Footer/Footer';
+import ModificarPrecioDeProductos from './componentes/Products/ModificarPrecioDeProductos';
 
 
 function App() {
@@ -80,6 +81,14 @@ function App() {
             <Route path='/CrearNuevoProducto' element=
             {
               <CrearNuevoProducto />
+            }
+            />
+
+            <Route path='/ModificarPrecioDeProductos' element=
+            {
+              <>
+               <ModificarPrecioDeProductos />
+              </>
             }
             />
 

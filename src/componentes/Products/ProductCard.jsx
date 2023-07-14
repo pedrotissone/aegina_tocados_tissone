@@ -49,7 +49,7 @@ function ProductCard( {title, img, description, price, id, discount} ) {
   }
 
   const handleChangePrice = (event) => {
-    SetCardPrice(event.target.value)    
+    SetCardPrice(parseInt(event.target.value))    
   }
 
   const handleChangeImg =  async (e) => {           

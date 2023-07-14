@@ -64,7 +64,8 @@ import {getAuth, onAuthStateChanged} from "firebase/auth"
           })          
     }
 
-    const value = {        
+    
+    const value = {                
         itemsInCart,
         addToCart,
         cart,
