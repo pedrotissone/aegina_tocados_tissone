@@ -4,12 +4,13 @@ Este proyecto fue creado con [Create React App](https://github.com/facebook/crea
 
 ## Que es Aegina Tocados?
 
-Es un e-commerce de venta de tocados artesanales de flores preservadas, piedras y porcelanas frías.
+Es un e-commerce con CMS de venta de tocados artesanales de flores preservadas, piedras y porcelanas frías.
 
 ## Descripción
 
-En la aplicación se puede filtrar por categoría de productos, ingresando al detalle de cada uno de ellos en donde figura su descripcion y precio. Asimismo
-se puede agregar al carrito la cantidad que se desee segun stock de cada producto, pudiendo vaciar el mismo o eliminar productos en particular. Por último al finalizar la compra se requiere llenar un pequeño formulario de contacto (nombre, email y teléfono) y se genera un id asociado a la compra del usuario.
+En la aplicación se puede filtrar por categoría de productos, ingresando al detalle de cada uno de ellos en donde figura su descripcion y precio. Al querer adquirir el producto se envia un whatsapp al dueño del e-commerce con el link de la vista del producto elegido.
+
+El sitio cuenta con un CMS (Content Management System) al cual se ingresa con un nombre de usuario y clave y permite al dueño del e-commerce crear, modificar o eliminar productos. Tambien permite actualizar el precio de todos los productos o de alguna categoria en el porcentaje que se indique.
 
 ## Teconologías
 
@@ -34,5 +35,4 @@ Pedro Federico Tissone
 
 ## Extras
 
-Este proyecto fue presentado para el curso de React de Coderhouse en el cual aprendi justamente dicha tecnología gracias al profesor Santiago Salkin, todavía
-queda mucho por aprender, esto recién comienza.
+Este proyecto fue realizado a pedido de un cliente.
