@@ -9,14 +9,9 @@
     },
     {
       "src": "favicon.ico",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "favicon.ico",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
+      "type": "image/x-icon",
+      "sizes": "145x145"
+    }   
   ],
   "start_url": ".",
   "display": "standalone",
