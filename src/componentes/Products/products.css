@@ -13,8 +13,3 @@
 
 /* MEDIA QUERIES */
 
-@media (max-width:402px) {
-    .divProducts {
-        width: 100%;
-    }
-}
