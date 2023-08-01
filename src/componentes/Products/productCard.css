@@ -73,7 +73,6 @@
     margin-bottom: 1rem;
     margin-top:1rem;
     font-size: 1.5rem;
-    /* color: rgb(109, 105, 105); */
     color: rgb(70, 49, 49);
 }
 
@@ -94,7 +93,6 @@
     margin-top:1rem;
     border: solid 0.1rem rgba(32, 92, 92, 0.85);
     border-radius: 8px;
-    /* background-color: rgb(32, 144, 144); */
     background-color: rgba(32, 144, 144, 0.637);
     color: white;    
 }

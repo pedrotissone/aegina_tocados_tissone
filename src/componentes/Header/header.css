@@ -16,7 +16,7 @@
 .headerAccessName {
     margin-top: 1rem;
     font-family: 'Caveat', cursive;
-    color: whitesmoke;
+    color: #123a3c;
     font-size: larger;
 }
 
@@ -24,10 +24,10 @@
     padding: 0.2rem;    
     cursor: pointer;    
     margin-top:1.5rem;
-    border: solid 0.1rem rgba(32, 92, 92, 0.85);
+    border: solid 0.1rem #266154;
     border-radius: 8px;
-    background-color: rgb(32, 144, 144);    
-    color: rgb(234, 221, 221);
+    background-color: #266154f1; 
+    color: rgb(236, 221, 221);
     width: 100%;
 }
 
