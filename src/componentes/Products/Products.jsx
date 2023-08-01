@@ -35,11 +35,6 @@ function Products() {
  
   return (
     <>
-
-    {/* {user && <div className='divCrearNuevoProducto'>
-      <Link to={"/CrearNuevoProducto"}><h2>Crear nuevo producto</h2></Link>
-      <Link to={"/ModificarPrecio"}><h2>Modificar precio de productos</h2></Link>
-      </div>} */}
     
     <section className='divProducts'>      
         
