@@ -8,13 +8,13 @@ import { useContext } from "react"
 
 function NavBarContainer(props) {
 
-  const { user } = useContext(cartContext)
+  const { user } = useContext(cartContext)  
 
   return (
     <>    
        <div className="navBar">
 
-        <Link className="navBarLink1" to="/category/Flores preservadas"><NavBarItem title="FLORES PRESERVADAS" img="/img/img1.jpeg"/></Link>
+        <Link className="navBarLink1" to="/category/Flores preservadas" ><NavBarItem title="FLORES PRESERVADAS" img="/img/img1.jpeg"/></Link>
 
         <Link className="navBarLink2" to="/category/Piedras"><NavBarItem title="PIEDRAS" img="/img/piedra1.jpeg"/></Link>
 

@@ -4,13 +4,17 @@ import {useState, useEffect} from "react"
 import ProductCard from './ProductCard.jsx'
 import {getItems, getItemsByCategory} from '../../services/firestore'
 import { useParams } from "react-router-dom"
-import { useContext } from 'react'
-import { cartContext } from '../../context/cartContext'
 
 
 function Products() {
 
-  // const { user } = useContext(cartContext)
+  const handleScroll = () => {
+    setTimeout( () => {
+      const productSection = document.getElementById("productSection")
+    productSection.scrollIntoView({behavior: "smooth"})
+  }, 1000);
+    }
+    
  
   const [products, setProducts] = useState([])
   
@@ -23,20 +27,21 @@ function Products() {
     } 
     else {
       let respuesta = await getItemsByCategory(idCategory);
-      setProducts(respuesta)      
+      setProducts(respuesta)           
     }
     
   }
   useEffect(
     ()=> {
       getItemsAsync();
+      handleScroll() 
     }, [idCategory]
   )
  
   return (
     <>
     
-    <section className='divProducts'>      
+    <section className='divProducts' id='productSection'>      
         
       
         {products.map((products)=>{
