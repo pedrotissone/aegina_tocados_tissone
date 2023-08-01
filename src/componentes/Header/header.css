@@ -1,6 +1,7 @@
 .headerDivContainer {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    background-color: #f4f4f4;    
 }
 
 .headerAccessDiv {
@@ -9,7 +10,7 @@
 }
 
 .headerAccess {
-    color: black;
+    color: #123a3c;
 }
 
 .headerAccessName {
@@ -44,35 +45,13 @@
 }
 
 
-.headerLink{
-    color: #205c5c;
-}
-
-.headerLink:hover{
-    color: whitesmoke;     
-}
-
-.title{
-    font-size: 6rem;
-    font-weight: lighter;       
-}
-
-.subtitle{
-    font-size: 3rem;
-    font-family: 'Caveat', cursive;
-    font-weight: lighter;      
-}
-
                                                         /* MEDIA QUERIES */
 
-@media (max-width: 478px ) {
+@media (max-width: 478px ) {   
 
-    .title {
-        font-size: 3.7rem;
-    }
-
-    .subtitle {
-        font-size: 1.8rem;
+    .headerLogo {
+        width: 350px;
+        height: 200px;
     }
 
     .headerAccess {
@@ -90,14 +69,11 @@
     }
 }
 
-@media (max-width: 288px) {
-
-    .title {
-        font-size: 3.2rem;
-    }
-
-    .subtitle {
-        font-size: 1.5rem;
+@media (max-width: 355px) {
+  
+    .headerLogo {
+        width: 230px;
+        height: 140px;
     }
 
 }

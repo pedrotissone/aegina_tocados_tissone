@@ -65,7 +65,7 @@ function Header(props) {
         <div className="headerTitle">
           <Link className="headerLink" to="/">
             <picture>
-
+              <img className="headerLogo" src="/img/aegina2.svg" alt="Logo de Aegina Tocados"/>
             </picture>
             {/* <h1 className="title">A E G I N A </h1>
             <h2 className="subtitle">Head Pieces</h2> */}

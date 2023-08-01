@@ -1,11 +1,11 @@
 .footerTextDiv {
-    display: flex;          
+    display: flex;         
 }
 
 .footerText {
     color: whitesmoke;
     font-weight: lighter;
-    cursor: pointer;
+    cursor: pointer;  
 }
 
 .footerText:hover {

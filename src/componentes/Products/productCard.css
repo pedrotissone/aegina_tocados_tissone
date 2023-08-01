@@ -1,6 +1,7 @@
 .productCardDiv{
     margin-bottom: 1.5rem;
-    background-color: rgba(218, 213, 213, 0.742);
+    /* background-color: rgba(218, 213, 213, 0.742); */
+    background-color: rgba(153, 148, 148, 0.199);
     width: 400px;      
 }
 
@@ -93,8 +94,9 @@
     margin-top:1rem;
     border: solid 0.1rem rgba(32, 92, 92, 0.85);
     border-radius: 8px;
-    background-color: rgb(32, 144, 144);
-    color: rgb(234, 221, 221);    
+    /* background-color: rgb(32, 144, 144); */
+    background-color: rgba(32, 144, 144, 0.637);
+    color: white;    
 }
 
 .volverYGuardarEdicionDiv {
