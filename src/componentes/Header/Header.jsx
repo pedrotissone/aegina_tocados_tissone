@@ -64,8 +64,11 @@ function Header(props) {
       <div className="headerTitleDiv">
         <div className="headerTitle">
           <Link className="headerLink" to="/">
-            <h1 className="title">A E G I N A </h1>
-            <h2 className="subtitle">Head Pieces</h2>
+            <picture>
+
+            </picture>
+            {/* <h1 className="title">A E G I N A </h1>
+            <h2 className="subtitle">Head Pieces</h2> */}
           </Link>
         </div>
       </div>
