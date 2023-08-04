@@ -28,7 +28,7 @@ function ItemDetail(product) {
         <img className='itemDetailImg' src={product.img} alt={product.description} />
         <h2 className='itemDetailTitle'>{product.title}</h2>
         <p className='itemDetailDescription'>{product.description}</p>
-        <h2 className='itemDetailPrice'>$ {product.price}</h2>
+        <h2 className='itemDetailPrice'>$ {product.price}.-</h2>
 
         <div className='itemDetailDiv'> 
 

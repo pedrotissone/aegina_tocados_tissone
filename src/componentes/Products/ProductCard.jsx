@@ -81,7 +81,7 @@ const handleDelete = async () => {
               <p className='productCardDescription'>{description}</p>
               {/* {discount && <small>Descuento: {discount}</small>} */}
               <div className='productCardFooter'>
-                <p className='productCardFooterPrice'>${price}.-</p>
+                <p className='productCardFooterPrice'>$ {price}.-</p>
                <Link to={urlDetail}> <button className="productCardFooterButton">Detalle</button></Link>
                {user && <button onClick={() => setEditing(true)} className="productCardFooterButton">Editar</button>}            
               </div>              

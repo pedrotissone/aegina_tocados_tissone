@@ -41,7 +41,7 @@ function ItemDetailContainer() {
   return (    
       <>
 
-        <ItemDetail id={product.id} title={product.title} img={product.img} description={product.description} price={product.price} stock={product.stock}/>
+        <ItemDetail id={product.id} title={product.title} img={product.img} description={product.description} price={product.price.toLocaleString()} stock={product.stock}/>
     
       </>    
   )
