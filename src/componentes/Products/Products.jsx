@@ -53,7 +53,7 @@ function Products() {
             title={products.title}
             img={products.img}
             description={products.description}
-            price={products.price.toLocaleString().replace(",", ".")}
+            price={products.price.toLocaleString().replace(",", ".")}//Esto es para que al renderizar el precio me ponga el punto de separacion de mil y me cambie la coma por punto (porque sino te muestra una u otra cosa segun la config del dispositivo)
             discount={products.discount}            
             /> 
           )
