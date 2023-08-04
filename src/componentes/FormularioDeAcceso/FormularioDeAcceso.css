@@ -14,7 +14,7 @@
     cursor: pointer;
     margin-bottom: 1rem;
     margin-top:1rem;
-    border: solid 0.1rem rgba(32, 92, 92, 0.85);
+    border: solid 0.1rem #f4f4f4;
     border-radius: 8px;
     background-color: rgb(32, 144, 144);
     color: rgb(234, 221, 221); 
