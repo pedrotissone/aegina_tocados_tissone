@@ -1,9 +1,9 @@
 
 .navBarDiv{
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
 }
+
 .categoryTitle{
     margin: 1rem;
     cursor: pointer;    
@@ -21,6 +21,7 @@
     width: 380px;
     height: 380px;
     border-radius: 25px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
                                                         /* MEDIA QUERIES */
