@@ -121,7 +121,7 @@ export  async function createDoc(titleparam, descriptionParam, priceParam, imgPa
         img: imgParam,
         title: titleparam,
         description: descriptionParam,
-        price: priceParam
+        price: parseInt(priceParam)
     })
    }
 

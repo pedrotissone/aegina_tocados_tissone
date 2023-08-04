@@ -53,7 +53,7 @@ function Products() {
             title={products.title}
             img={products.img}
             description={products.description}
-            price={products.price}
+            price={products.price.toLocaleString()}
             discount={products.discount}            
             /> 
           )
