@@ -74,7 +74,7 @@ const handleDelete = async () => {
     <div className='productCardDiv'>
             <div className='productCard'>
               <picture className='productCardImgContainter'>
-              <img className='productCardImg' src={img} alt={"Tocado de novia de " + category}/>
+              <Link><img className='productCardImg' src={img} alt={"Tocado de novia de " + category}/></Link>
               </picture>              
               
               <h2 className='productCardTitle'>{title}</h2>
