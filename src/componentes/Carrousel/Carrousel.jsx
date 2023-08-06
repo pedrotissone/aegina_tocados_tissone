@@ -17,10 +17,10 @@ const Carrousel = () => {
         <>       
         <Slider {...settings}>
           <div>
-            <img className="carrouselImagenes" src="/img/carrousel1.jpg" loading="lazy" alt="Tocado de flores preservadas en sombrero"/>
+            <img className="carrouselImagenes" src="/img/carrousel1.jpg" loading="lazy" alt="Tocado de novia de flores preservadas en sombrero"/>
           </div>
           <div>
-          <img className="carrouselImagenes" src="/img/carrousel2.jpg" loading="lazy" alt="Flores preservadas para tocados"/>
+          <img className="carrouselImagenes" src="/img/carrousel2.jpg" loading="lazy" alt="Flores preservadas para tocados de novia"/>
           </div>
           <div>
           <img className="carrouselImagenes" src="/img/carrousel3.jpg" loading="lazy" alt="Niña con corona de flores preservadas"/>

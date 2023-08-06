@@ -9,7 +9,7 @@ import { cartContext } from '../../context/cartContext'
 
 //RENDERING CONDICIONAL DE LA PROPIEDAD DESCUENTO USANDO OPERADOR &&
 
-function ProductCard( {title, img, description, price, id, discount} ) {
+function ProductCard( {title, img, description, price, id, discount, category} ) {
   
   const storage = getStorage(app) // get the storage instance
   
@@ -74,7 +74,7 @@ const handleDelete = async () => {
     <div className='productCardDiv'>
             <div className='productCard'>
               <picture className='productCardImgContainter'>
-              <img className='productCardImg' src={img} alt={description}/>
+              <img className='productCardImg' src={img} alt={"Tocado de novia de " + category}/>
               </picture>              
               
               <h2 className='productCardTitle'>{title}</h2>

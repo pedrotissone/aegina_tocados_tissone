@@ -4,7 +4,7 @@ function NavBarItem(props) { // Este componente va a representar las cards de lo
   return (
     
     <div className="navBarDiv">
-        <img className="navBarImg" src={props.img} alt={props.title}/>
+        <img className="navBarImg" src={props.img} alt={"Tocados de novia de " + props.title}/>
         <p className="categoryTitle">{props.title} </p>        
     </div>
   )
