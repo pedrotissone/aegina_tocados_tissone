@@ -3,7 +3,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
-    background-color: #266154; 
+    /* background-color: #266154; */
+    background-color: #4e7b7b;
     margin-bottom: 2rem;
 }
 
