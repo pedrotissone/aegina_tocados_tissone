@@ -17,16 +17,16 @@ const Carrousel = () => {
         <>       
         <Slider {...settings}>
           <div>
-            <img className="carrouselImagenes" src="/img/carrousel1.jpg" loading="lazy" alt="Tocado de novia de flores preservadas en sombrero"/>
+            <img className="carrouselImagenes" src="/img/carrousel1.webp" loading="lazy" alt="Tocado de novia de flores preservadas en sombrero"/>
           </div>
           <div>
-          <img className="carrouselImagenes" src="/img/carrousel2.jpg" loading="lazy" alt="Flores preservadas para tocados de novia"/>
+          <img className="carrouselImagenes" src="/img/carrousel2.webp" loading="lazy" alt="Flores preservadas para tocados de novia"/>
           </div>
           <div>
-          <img className="carrouselImagenes" src="/img/carrousel3.jpg" loading="lazy" alt="Niña con corona de flores preservadas"/>
+          <img className="carrouselImagenes" src="/img/carrousel3.webp" loading="lazy" alt="Niña con corona de flores preservadas"/>
           </div>
           <div>
-          <img className="carrouselImagenes" src="/img/carrouselCelu.jpeg" loading="lazy" alt="Tocado de novia de porcelana"/>
+          <img className="carrouselImagenes" src="/img/carrouselCelu.webp" loading="lazy" alt="Tocado de novia de porcelana"/>
           </div>
           <div>
           <img className="carrouselImagenes" src="/img/carrouselFlores2.jpeg" loading="lazy" alt="Tocado de novia de flores preservadas"/>
@@ -35,7 +35,7 @@ const Carrousel = () => {
           <img className="carrouselImagenes" src="/img/carrouselPulsera.jpeg" loading="lazy" alt="Tocado de novia de flores preservadas"/>
           </div>
           <div>
-          <img className="carrouselImagenes" src="/img/carrouselFlores.jpeg" loading="lazy" alt="Tocado de novia de flores preservadas"/>
+          <img className="carrouselImagenes" src="/img/carrouselFlores.webp" loading="lazy" alt="Tocado de novia de flores preservadas"/>
           </div>
           <div>
           <img className="carrouselImagenes" src="/img/carrouselJopi.jpeg" loading="lazy" alt="Tocado de novia de flores preservadas"/>
