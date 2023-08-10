@@ -19,7 +19,7 @@ function NavBarContainer(props) {
         </Link>
 
         <Link className="navBarLink2" to="/category/Piedras">
-          <NavBarItem title="PIEDRAS" imgAvif="/img/navBarPiedra.png" img="/img/navBarPiedra.webp"/>
+          <NavBarItem title="PIEDRAS" imgAvif="/img/navBarPiedra.avif" img="/img/navBarPiedra.webp"/>
           </Link>
 
         <Link className="navBarLink3" to="/category/Porcelana fria">
