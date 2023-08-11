@@ -11,6 +11,8 @@
 
 .headerAccess {
     color: #123a3c;
+    opacity: 0;
+
 }
 
 .headerAccessName {
