@@ -15,15 +15,15 @@ function NavBarContainer(props) {
        <div className="navBar">
 
         <Link className="navBarLink1" to="/category/Flores preservadas" >
-          <NavBarItem title="FLORES PRESERVADA" img="/img/categoryFlores.jpg"/>
+          <NavBarItem title="FLORES PRESERVADA" img="/img/categoryFloresComprimida.jpg"/>
         </Link>
 
         <Link className="navBarLink2" to="/category/Piedras">
-          <NavBarItem title="PIEDRA" img="/img/categoryPiedra.png"/>
+          <NavBarItem title="PIEDRA" img="/img/categoryPiedraComprimida.png"/>
           </Link>
 
         <Link className="navBarLink3" to="/category/Porcelana fria">
-          <NavBarItem title="PORCELANA FRÍA"  img="/img/categoryPorcelana.jpg"/>
+          <NavBarItem title="PORCELANA FRÍA"  img="/img/categoryPorcelanaComprimida.jpg"/>
           </Link>        
 
       </div>
