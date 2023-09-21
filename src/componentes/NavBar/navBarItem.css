@@ -8,8 +8,7 @@
     margin: 1rem;
     cursor: pointer;    
     color: rgb(236, 221, 221);
-    text-align: center;
-  
+    text-align: center;  
 }
 
 .categoryTitle:hover{    
@@ -22,6 +21,11 @@
     height: 380px;
     border-radius: 25px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    transition: filter 0.2s ease-in-out;
+}
+
+.navBarImg:hover {
+    filter: brightness(1.1);
 }
 
                                                         /* MEDIA QUERIES */
