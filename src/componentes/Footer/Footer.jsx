@@ -17,23 +17,23 @@ function Footer() {
         <>
             <div className="footerTextDiv">
                 <div className="react-icons">
-                    < BiSolidMap  size={17} style={{color:"whitesmoke"}}/>
+                    < BiSolidMap  size={19} style={{color:"whitesmoke"}}/>
                 </div>
             <p className="footerText">Ciudad Autónoma de Buenos Aires, Argentina</p>
             </div>            
 
             <div className="footerTextDiv">
-            < FaWhatsapp size={17} style={{color:"whitesmoke"}}/>
+            < FaWhatsapp size={19} style={{color:"whitesmoke"}}/>
             <p className="footerText" onClick={handleClickWhatsapp}>+54 9 11 6614-2146</p>
             </div>
             
             <div className="footerTextDiv">
-            < BiLogoInstagramAlt size={17} style={{color:"whitesmoke"}}/>
-            <p className="footerText" onClick={handleClickInstagram}> I N S T A G R A M</p>
+            < BiLogoInstagramAlt size={19} style={{color:"whitesmoke"}}/>
+            <p className="footerText" onClick={handleClickInstagram}>@Aegina.tocados </p>
             </div>            
             <div className="footerTextDiv">
             <p className="footerText">Aegina Head Pieces Copyright 2023</p>
-            < BiSolidCopyright size={17} style={{color:"whitesmoke"}}/>
+            < BiSolidCopyright size={19} style={{color:"whitesmoke"}}/>
             </div>
             
         </>

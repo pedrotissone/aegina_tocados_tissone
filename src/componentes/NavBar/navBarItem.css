@@ -21,11 +21,12 @@
     height: 380px;
     border-radius: 25px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
-    transition: filter 0.2s ease-in-out;
+    transition: filter 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .navBarImg:hover {
     filter: brightness(1.1);
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.3);
 }
 
                                                         /* MEDIA QUERIES */

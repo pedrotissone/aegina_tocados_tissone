@@ -75,15 +75,16 @@ const handleDelete = async () => {
             <div className='productCard'>
               <picture className='productCardImgContainter'>
               <Link to={urlDetail}> <img className='productCardImg' src={img} alt={"Tocado de novia de " + category}/></Link>
-              </picture>              
-              
+              </picture>
+                          
               <h2 className='productCardTitle'>{title}</h2>
-              <p className='productCardDescription'>{description}</p>
+              <p className='productCardDescription'>{description}</p>              
               {/* {discount && <small>Descuento: {discount}</small>} */}
               <div className='productCardFooter'>
                 <p className='productCardFooterPrice'>$ {price}.-</p>
                <Link to={urlDetail}> <button className="productCardFooterButton">Detalle</button></Link>
-               {user && <button onClick={() => setEditing(true)} className="productCardFooterButton">Editar</button>}            
+               {user && <button onClick={() => setEditing(true)} className="productCardFooterButton">Editar</button>}             
+
               </div>              
                            
             </div>
