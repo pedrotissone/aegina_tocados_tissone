@@ -4,7 +4,8 @@
     width: 400px;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
     transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border-radius: 2%;        
+    border-top-right-radius: 2%;
+    border-top-left-radius: 2%;       
 }
 
 .productCardDiv:hover {   
@@ -15,7 +16,10 @@
 .productCard {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    width: 400px;
+    border-top-right-radius: 2%;
+    border-top-left-radius: 2%;
+    /* margin-top: 20px; */
        
 }
 
@@ -23,16 +27,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;    
-    width:400px; 
-    height: 400px;
+    width:400px;
+    border-top-right-radius: 2%;
+    border-top-left-radius: 2%;  
+    /* height: 400px; */
     
 }
 
 .productCardImg{
     margin-top: auto;
     margin-bottom: auto;
-    max-width:400px;
-    max-height: 400px;            
+    /* max-width:400px;
+    max-height: 400px;             */
+    width: 400px;
+    border-top-right-radius: 2%;
+    border-top-left-radius: 2%;
+    clip-path: polygon(1% 0, 100% 0, 100% 89%, 0% 100%);
 }
 
 
@@ -40,7 +50,7 @@
     text-align: center;
     margin-bottom: 1rem;  
     color: rgb(97, 102, 99);
-    font-weight: lighter;    
+    font-weight: lighter;  
 }
 
 .editProductCardTitle {
@@ -95,7 +105,8 @@
 }
 
 .productCardFooterButton{
-    width: 100px;
+    width: 150px;
+    height: 35px;
     padding: 0.2rem;    
     cursor: pointer;
     margin-bottom: 1rem;
@@ -119,14 +130,14 @@
 
     .productCardDiv {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 170px;       
+        /* flex-direction: column;
+        align-items: center; */
+        width: 150px;       
     }
 
     .productCard {
         width: 150px;
-        margin-top: 15px;
+        /* margin-top: 15px; */
     }
 
     .productCardImgContainter {
@@ -140,10 +151,11 @@
     }
 
     .productCardTitle {
-        height: 50px;        
-        margin-top: 20px;
+        height: 45px;        
+        margin-top: 0;
         margin-bottom: 10px;
         font-size: 17px;
+        
     }
 
     .productCardDescription {
@@ -152,16 +164,16 @@
 
     .productCardFooterPrice {
         font-size: 20px;
-        margin-bottom: 5px;
-        margin-top: 5px;
+        margin-bottom: 0;
+        margin-top: 0;
     }
 
     .productCardFooterButton {
         font-size: 11px;
-        margin-bottom: 5px;
-        margin-top: 5px;
-        width: 50px;
-
+        margin-bottom: 15px;
+        margin-top: 15px;
+        width: 110px;
+        height: 25px;
     }
 
     .editProductCardFooterPrice {
