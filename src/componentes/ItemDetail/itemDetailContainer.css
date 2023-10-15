@@ -1,5 +1,14 @@
 .itemDetailContainerDiv {
     display: flex;
     margin: auto;
-    /* height: 600px */
     }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1138px) {
+
+    .itemDetailContainerDiv {
+        flex-direction: column;
+    }
+
+}

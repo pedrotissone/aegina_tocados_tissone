@@ -81,51 +81,55 @@
     height: 40px;
 }
 
-@media (max-width: 671px) {
+@media (max-width: 1138px) {
 
-    .itemDetailDivContainer, .itemDetailImg {
-        width: 400px;
+    .itemDetailHeader {
+        margin-top: 1.5rem;
+    }
+}
+
+
+@media (max-width: 583px) {
+
+    .itemDetailBody {
+        width: auto;
     }
 
     .itemDetailTitle {
         font-size: 2rem;
     }
 
-    .itemDetailDescription {
-        font-size: 1.1rem;
-    }
-
     .itemDetailPrice {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
-
 }
 
-@media (max-width:455px) {
+@media (max-width: 385px) {
 
-    .itemDetailDivContainer, .itemDetailImg {
-        width: 300px;
+    .itemDetailHeader {
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .itemDetailTitle {
-        font-size: 1.8rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .itemDetailDescription {
-        font-size: 0.9rem;
+        font-size: 1.7rem;
     }
 
     .itemDetailPrice {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+        margin-bottom: 3rem;
     }
 
-    .itemDetailButtonMessage, .itemDetailButtonVolver {
-        font-size: 0.7rem;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-
+    .itemDetailDescription {
+        font-size: 1rem;
     }
 
+    .itemDetailButtons {
+        margin-top: 5rem;
+        margin-bottom: 0;
+    }
+
+    .itemDetailButtonVolver, .itemDetailButtonMessage {
+       width: 120px;
+    }
 }
