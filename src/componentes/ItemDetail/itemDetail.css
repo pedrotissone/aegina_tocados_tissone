@@ -106,6 +106,10 @@
 
 @media (max-width: 385px) {
 
+    .itemDetailBody {
+        height: auto;
+    }
+
     .itemDetailHeader {
         margin-left: 0;
         margin-right: 0;
