@@ -37,8 +37,10 @@ function App() {
               <>
               <main className='main'>
                 <NavBarContainer />
-                <h2 className="galeriaTitle">Happiness is only real when shared</h2> 
-                <Carrousel/>
+                <h2 className="galeriaTitle">Happiness is only real when shared</h2>
+                <div className='carrouselFooterDiv'>                
+                  <Carrousel/>
+                </div> 
               </main>
               <footer className='footer'>
                 <Footer/>
