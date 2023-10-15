@@ -14,9 +14,21 @@
     margin: auto;    
 }
 
-.slick-prev, .slick-next {
+/* .slick-prev, .slick-next {
     visibility: hidden;
     left: 0
+} */
+
+.slick-next {
+    visibility: visible !important;
+    left: 430px !important;
+    z-index: 1 !important;
+}
+
+.slick-prev {
+    visibility:visible !important;
+    right: 0px !important;
+    z-index: 1 !important;
 }
 
 @media (max-width: 392px) {
