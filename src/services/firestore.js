@@ -138,6 +138,14 @@ export  async function createDoc(titleparam, descriptionParam, priceParam, imgPa
     }
    }
 
+   export async function getImagenesCarrousel(productId) {        
+        const docRef = doc(DB, "imagenesCarrousel",`${productId}Carrousel`)
+        const docSnapshot = await getDoc(docRef)
+        const docData = docSnapshot.data()
+        console.log(docData.img2)
+        console.log(docData.img3)       
+   }
+
 //                                                      FUNCION PARA CARGAR TUS PRODUCTOS A FIRESTORE SOLO SE USA UNA VEZ
 
 // export async function exportArrayToFirestore(){

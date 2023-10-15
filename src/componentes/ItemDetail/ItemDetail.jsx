@@ -5,6 +5,8 @@ import { FaWhatsapp } from "react-icons/fa"
 
 
 
+
+
 function ItemDetail(product) {
 
   const navigate = useNavigate()
@@ -21,27 +23,32 @@ function ItemDetail(product) {
 };
 
 
+
   return (
-    <div className='itemDetailBody'>      
+    <div className='itemDetailBody'>
+          
 
-      <div className='itemDetailDivContainer'>
-        <img className='itemDetailImg' src={product.img} alt={product.description} />
+      <div className='itemDetailHeader'>      
+        {/* <img className='itemDetailImg' src={product.img} alt={product.description} /> */}
         <h2 className='itemDetailTitle'>{product.title}</h2>
-        <p className='itemDetailDescription'>{product.description}</p>
         <h2 className='itemDetailPrice'>$ {product.price}.-</h2>
+      </div>
 
-        <div className='itemDetailDiv'> 
-
-          <div className='itemDetailCounter'>             
-              
-              <button className='itemDetailButtonMessage' onClick={sendMessage}>Quiero esto! <FaWhatsapp/></button>
-              <button className='itemDetailButtonVolver' onClick={navigateBack}>Volver</button>
-
-          </div>
+        <div className='itemDetailDescriptionDiv'>
+          
+          <h3 className='itemDetailDescriptionTitle'>DESCRIPCIÓN:</h3>
+          <p className='itemDetailDescription'>{product.description}</p>
 
         </div>
 
-      </div>
+          <div className='itemDetailButtons'>             
+              <button className='itemDetailButtonVolver' onClick={navigateBack}>Volver</button>
+              <button className='itemDetailButtonMessage' onClick={sendMessage}>Quiero esto! <FaWhatsapp/></button>
+          </div>
+
+        
+
+      
 
     </div>
 

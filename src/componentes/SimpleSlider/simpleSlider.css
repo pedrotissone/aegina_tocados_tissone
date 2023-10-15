@@ -1,0 +1,29 @@
+.simpleSliderDiv {
+    width: 450px;
+    height: 450px;
+    border: solid 0.1 rem black;
+    margin-left: 50px;
+}
+
+.simpleSliderImagenes {
+    height: 598px;         
+    margin: auto;    
+}
+
+/* .slick-prev, .slick-next {
+    visibility:visible;
+    
+} */
+.slick-next {
+    visibility: visible !important;
+    left: 430px !important;
+    z-index: 1 !important;
+
+}
+
+.slick-prev {
+    visibility:visible !important;
+    right: 0px !important;
+    z-index: 1 !important;
+
+}
