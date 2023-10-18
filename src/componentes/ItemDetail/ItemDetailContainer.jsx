@@ -49,7 +49,8 @@ function ItemDetailContainer() {
  const [img3, setImg3] = useState("")
 
   async function getImagenesCarrousel(productId) {        
-    const docRef = doc(DB, "imagenesCarrousel",`${productId}Carrousel`)
+    // const docRef = doc(DB, "imagenesCarrousel",`${productId}Carrousel`) Antes usaba la palabra carrousel pero al llamarse asi la coleccion con el id es suficiente
+    const docRef = doc(DB, "imagenesCarrousel", productId)
     const docSnapshot = await getDoc(docRef)
     const docData = docSnapshot.data()
     if (docData) {
