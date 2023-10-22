@@ -68,13 +68,13 @@ function ItemDetailContainer() {
         setProduct(respuestaDatos) //NO SE ROMPE TODO XQ TENGO EL SET TIMEOUT SINO TE HARÍA UN BUCLE INFINITO Y TE RENDERIZARIA TODO INFINITAS VECES XQ SIEMPRE ESTARIA CMABIANDO DE ESTADO
         setIsLoading(false)    
       })
-      getImagenesCarrousel(id)      
+      getImagenesCarrousel(id)     
     },[id]
   )
 
 
   if (isLoading)
-  return (<Loader/>);
+  return (<Loader/>);  
 
   return (    
       <div className='itemDetailContainerDiv'>
